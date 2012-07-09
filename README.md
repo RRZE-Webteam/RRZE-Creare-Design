@@ -1,4 +1,4 @@
 RRZE-Creare-Theme
 =================
 
-Basis-Theme auf im Webbaukasten-Format..
+Basis-Theme auf im Webbaukasten-Format
