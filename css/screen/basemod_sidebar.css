@@ -1,0 +1,109 @@
+/**
+ * Projekt Vorlagenkatalog 
+ *
+ * Basisstylesheet HTML5
+ *
+ * @mod_name        sidebar
+ * @mod_desc        Sidebar-Spalte rechts neben Content
+ *
+ * @copyright       Copyright 2005-2011, RRZE
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/)
+ * @link            http://www.vorlagen.uni-erlangen.de
+ * @package         css
+ * @version         1.0
+ * @lastmodified    02/2012
+*/
+
+@media screen, projection
+{
+
+    div#content {
+        margin-right: 250px;
+    }
+
+    div#main>aside {
+        width: 230px;
+        display: block;
+        float: right;
+    }
+
+    div#main div#sidebar {
+        display: block;
+        padding: 1em;
+        background-color: #EEE;
+        border: 1px solid #CCC;
+        margin-top: -50px;
+        box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    }
+
+    div#main:after {
+        clear:both;
+        content:".";
+        display:block;
+        font-size:0;
+        height:0;
+        visibility:hidden;
+    }
+
+    #sidebar h4 {
+        color:#024670;
+        font-size:1.2em;
+        font-size: 0.8em;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        width: auto;
+        padding:0.5em 0 0.5em 0;
+    }
+    #sidebar ul{
+        color:#666;
+    }
+
+    #sidebar ul li,
+    #sidebar ul li a:link{
+        font-size: 0.9em;
+        padding: 4px 0 4px 5px;
+        position: relative;
+        text-decoration: none;
+        color:#666;
+    }
+
+    #sidebar ul li ul li{
+        padding-left:15px; 
+    }
+
+    #sidebar ul li a:link,
+    #sidebar ul li a:visited,
+    #sidebar ul li a:active,
+    #sidebar ul li a:focus,
+    #sidebar ul li a:hover{
+        color:#666;
+    }
+
+    #sidebar ul li a:hover{
+        text-decoration: underline;
+        color:#555;
+    }
+    div#sidebar ul li a::before{
+        position: absolute;
+        top: 10px;
+        left: -10px;
+        z-index: 20;
+        content: "";
+        border: 4px solid #EEE;
+        border-left: 4px solid #333;
+    }
+
+    #sidebar ul li a:active::before,
+    #sidebar ul li a:focus::before,
+    #sidebar ul li a:hover::before {
+        position: absolute;
+        top: 10px;
+        left: -10px;
+        z-index: 20;
+        content: "";
+        border: 4px solid #EEE;
+        border-left: 4px solid #333;
+    }
+
+}

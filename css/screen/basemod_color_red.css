@@ -1,0 +1,104 @@
+/**
+ * Projekt Vorlagenkatalog 
+ *
+ * Basisstylesheet HTML5
+ *
+ * @mod_name        color_red
+ * @mod_desc        Farbvariante rot
+ *
+ * @author			Thomas Kipf
+ * @copyright       Copyright 2005-2012, RRZE
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/)
+ * @link            http://www.vorlagen.uni-erlangen.de
+ * @package         css
+ * @version         1.0
+ * @lastmodified    05/2012
+ */
+
+
+@media screen, projection
+{
+	
+	div#kopf div#titel h1 {
+		color: #6d0b06;
+	}
+	
+	div#menu {
+		background: #6d0b06;
+		background: -webkit-gradient(linear, left top, left bottom, from(#990f09), to(#6d0b06));
+		background: -moz-linear-gradient(top, #990f09, #6d0b06);  
+		background: linear-gradient(top, #990f09, #6d0b06);  
+	}
+	
+	#kopf #navline {
+		background: #6d0b06;
+		background: -webkit-gradient(linear, left top, left bottom, from(#990f09), to(#6d0b06));
+		background: -moz-linear-gradient(top, #990f09, #6d0b06);  
+		background: linear-gradient(top, #990f09, #6d0b06);  
+	}
+
+	ul#navigation li a,
+	ul#navigation li a:link,
+	ul#navigation li span.aktiv  {		
+		background: #6d0b06;
+		background: -webkit-gradient(linear, left top, left bottom, from(#990f09), to(#6d0b06));
+		background: -moz-linear-gradient(top, #990f09, #6d0b06);  
+		background: linear-gradient(top, #990f09, #6d0b06);  
+		border-right: 1px solid #7e0c07;
+	}
+	
+	ul#navigation li a:hover, 
+	ul#navigation li a:focus, 
+	ul#navigation li a:active {
+		background: #333333;
+		background: -webkit-gradient(linear, left top, left bottom, from(#6d0b06), to(#333333));
+		background: -moz-linear-gradient(top, #6d0b06, #333333);  
+		background: linear-gradient(top, #6d0b06, #333333);  
+	}
+	
+	ul#navigation ul#hauptnavigation>li:hover>a,
+	ul#navigation ul#hauptnavigation>li.hover>a,
+	ul#navigation ul#hauptnavigation>li:hover>span>a,
+	ul#navigation ul#hauptnavigation>li.hover>span>a {
+		background: #333333;
+		background: -webkit-gradient(linear, left top, left bottom, from(#6d0b06), to(#333333));
+		background: -moz-linear-gradient(top, #6d0b06, #333333);  
+		background: linear-gradient(top, #6d0b06, #333333);  
+	}
+	
+	form fieldset legend {
+		color: #6d0b06 !important;
+	}
+	
+	form fieldset {
+		background: #EED;
+	}
+	
+	#content td {
+		border-right: 1px solid #6d0b06;
+		border-bottom: 1px solid #6d0b06;
+		border-top: 1px solid #6d0b06;
+		background: #EDD;
+	}
+	
+	#content th {
+		border-right: 1px solid #6d0b06;
+		border-bottom: 1px solid #6d0b06;
+	}
+	
+	#content table.wechselfarbe tr td {
+		background-color: #FEE;	
+	}
+	
+	#content table.wechselfarbe tr:nth-child(odd) td {
+		background-color: #EDD;
+	}
+	
+	pre {
+		border-color: #CBB;
+	}
+	
+	div.klein_box_rechts, div.vollbox {
+		background-color: #EDD;	
+	}
+		

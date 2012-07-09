@@ -1,0 +1,1438 @@
+/**
+ * Projekt Vorlagenkatalog 
+ *
+ * Basisstylesheet HTML5
+ *
+ * Strukturdefinitionen & Farbinformationen
+ *
+ * @author			Thomas Kipf
+ * @copyright       Copyright 2005-2012, RRZE
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/)
+ * @link            http://www.vorlagen.uni-erlangen.de
+ * @package         css
+ * @version         1.0
+ * @lastmodified    02/2012
+*/
+
+
+@media screen, projection
+{
+
+    /*  ------------------------------------------------------
+    SEITE
+    --------------------------------------------------------*/	
+    div#seite {
+        background-color: #d4d7d9; 
+    } 
+
+    /*  ------------------------------------------------------
+    KOPF MIT LOGO
+    --------------------------------------------------------*/
+    header {
+        border-top: 36px solid #282828;
+        background-color: #f5f5f5;
+    }
+
+    div#kopf {
+        max-width: 1040px;
+        margin: 0 auto;
+        height: 150px;
+        position: relative;
+    }
+
+    div#kopf div#logo  {
+    }
+
+    div#kopf div#logo img { 
+        position: static;
+        padding-top: 20px;
+        padding-left: 25px;
+        padding-right: 25px;
+        float: left;
+    }
+
+    div#kopf div#logo p {
+        font: 1.6em "Lucida Sans", "Lucida Sans Unicode", Verdana, sans-serif;
+        font-weight: bold;
+        position: static;
+        padding-top: 33px;
+        padding-left: 25px;
+        line-height: 140%;
+        color: #333;
+    }
+    div#kopf div#logo p .description {
+        display: block;
+        font-size: 0.70em;
+        line-height: 110%;
+    }
+
+    div#kopf div#logo p a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    div#kopf div#logo p a:focus, 
+    div#kopf div#logo p a:active {
+        color: #333;
+    }
+
+    div#kopf div#logo p a:hover, 
+    div#kopf div#logo p a:active,
+    div#kopf div#logo p a:active {
+        text-decoration: underline;
+    }
+    #kopf #logo a img {
+        background-color: inherit;
+    }
+
+    #kopf #topline {
+        height: 36px;
+        background-color: #282828;
+        width: 100%;
+        z-index: 10000;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    #kopf #navline {
+        height: 40px;
+        background-color: #282828;
+        width: 100%;
+        z-index: 10001;
+        position: fixed;
+        top: 36px;
+        left: auto;
+        background: #004874;
+        background: -webkit-gradient(linear, left top, left bottom, from(#0065a3), to(#004874));
+        background: -moz-linear-gradient(top, #0065a3, #004874);  
+        background: linear-gradient(top, #0065a3, #004874);  
+        display: none;
+        max-width: 1040px;
+        box-shadow: 0px 3px 4px rgba(0,0,0,0.3);	
+    }
+
+    #kopf #navline.show {
+        display: block;
+    }
+
+    /*  ------------------------------------------------------
+    KOPF MIT TITEL
+    --------------------------------------------------------*/
+    div#kopf div#titel {
+        position: absolute;
+        top: 200px;
+        left: 20px;
+        z-index: 1;
+    }
+
+    div#kopf div#titel h1 {
+        font-size: 1.6em;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-style: italic;
+        font-weight: normal;
+        color: #004874;
+    }
+
+    /*  ------------------------------------------------------
+    KOPF MIT BREADCRUMB
+    --------------------------------------------------------*/
+    div#kopf div#breadcrumb {
+        position: absolute;
+        top: 150px;
+        left: 0;
+        z-index: 1;
+        background-color: #f3f3f3;
+        background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f3f3f3));
+        background: -moz-linear-gradient(top, #fff, #f3f3f3);  
+        background: linear-gradient(top, #fff, #f3f3f3);  
+        width: 100%;
+        padding: 7px 0;
+        text-align: left;
+    }
+
+    div#kopf div#breadcrumb h2 {
+        display: inline;
+        font-size:0.76em;
+        font-weight: normal;
+        font-family: "Verdana", "Arial", sans-serif;
+        color: #333;
+        padding: 7px;
+        padding-left: 20px;
+    }
+
+    div#kopf div#breadcrumb p {
+        display: inline;
+        font-size:0.76em;
+        padding: 7px;
+    }
+
+    div#kopf div#breadcrumb p strong {
+        font-weight: normal;
+    }
+
+    div#kopf div#breadcrumb a, 
+    div#kopf div#breadcrumb a:link {
+        text-decoration: underline;
+        color: #333;
+    }
+
+    div#kopf div#breadcrumb a:visited {
+        color: #666;
+    }
+
+    div#kopf div#breadcrumb a:hover, 
+    div#kopf div#breadcrumb a:focus, 
+    div#kopf div#breadcrumb a:active {
+        text-decoration: none;
+        border-bottom: #669999 1px solid;
+        background: #C4DCDC;
+    }
+
+    div#kopf div#breadcrumb a:focus, 
+    div#kopf div#breadcrumb a:active {
+        background: #669999;
+        color: #FDFDF6;
+        border-bottom: #006666 1px solid;
+    }
+
+
+    /*  ------------------------------------------------------
+    KOPF MIT HAUPTMENUE
+    --------------------------------------------------------*/
+    div#kopf div#hauptmenu {
+    }
+
+    div#kopf div#hauptmenu h2 {
+        position:absolute;
+        left:-3000px;
+        top:-3000px;
+        width:1px;
+    }
+
+    div#kopf div#hauptmenu ul {
+        padding: 1px 2px 2px 5px;
+        font-weight: bold;	
+    }
+
+    div#kopf div#hauptmenu ul li {
+        display: inline;
+        padding: 0 0 0 10px;
+        list-style-image:url(/img/menu.gif);
+    } 
+
+    div#kopf div#hauptmenu ul li a:link,
+    div#kopf div#hauptmenu ul li a:visited, 
+    div#kopf div#hauptmenu ul li span {
+        font-size: 0.75em;
+        margin: 0 16px 0 0;
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    div#kopf div#hauptmenu ul li a:hover {
+        text-decoration: underline;
+    }
+
+    div#kopf div#hauptmenu ul li a:active, 
+    div#kopf div#hauptmenu ul li a:focus {
+        text-decoration: underline;
+        color: #3E77A9;
+    }
+
+    div#kopf div#hauptmenu ul li span {
+        color: #3E77A9;
+    }
+    /*  ------------------------------------------------------
+    KOPF MIT SPRUNGMARKEN
+    --------------------------------------------------------*/
+    div#kopf div#sprungmarken {
+    }
+
+    div#kopf div#sprungmarken h2 {
+        position: absolute;    
+        left:-3000px;
+        top:-3000px;
+        width: 1px;
+        height:1px;
+    }
+
+    div#kopf div#sprungmarken ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    div#kopf div#sprungmarken a:link, 
+    div#kopf div#sprungmarken a:visited {
+        position: absolute;    
+        right:0;
+        top: -3000px;
+        display: block;
+        width: 1px;
+        height:1px;
+        font-size:1px;
+        overflow:hidden;
+    }
+
+    div#kopf div#sprungmarken a:hover, 
+    div#kopf div#sprungmarken a:active,
+    div#kopf div#sprungmarken a:focus {
+        white-space: nowrap;
+        position: absolute;    
+        right: 15px;
+        top: 40px;
+        text-decoration: underline;
+        padding:8px 15px;
+        text-align: right;
+        display: block;
+        width: auto;
+        height:auto;
+        font-size: 0.76em;
+        overflow:auto;
+        border-bottom: #666 1px solid;
+        background: #444;
+        color: #fff;
+        box-shadow: 0px 3px 4px rgba(0,0,0,0.2);	
+    }
+
+    /*  ------------------------------------------------------
+    KOPF MIT SUCHE
+    --------------------------------------------------------*/
+    div#kopf div#suche {
+        position: absolute;
+        top: -29px;
+        right: 0px;
+        z-index: 10001;
+    }	
+
+    div#kopf div#suche.fixed {
+        position: fixed;
+        top: 7px;
+        right: auto;
+        z-index: 10001;
+        text-align: right;
+    }
+
+    div#kopf .shadow {
+        box-shadow: 0px 3px 4px rgba(0,0,0,0.3);
+    }
+
+
+    div#kopf div#suche h2, 
+    div#kopf div#suche p label {
+        position:absolute;
+        left:-3000px;
+        top:-3000px;
+        width:1px;
+    }
+
+    div#kopf div#suche input {
+        background: #FFF;
+        border: 0 none;
+        font: bold 12px Arial,Helvetica,Sans-serif;
+        color: #333;
+        width:150px;
+        padding: 4px 15px 4px 15px;
+        border-radius: 10px;
+        box-shadow: inset 2px 2px 2px rgba(0,0,0,.2);
+    }
+
+    div#kopf div#suche input[type="text"] {
+        -webkit-transition: width 0.3s;
+        -moz-transition: width 0.3s;
+        -ms-transition: width 0.3s;
+        -o-transition: width 0.3s;
+        transition: width 0.3s;
+    }
+
+    div#kopf div#suche input[type="text"]:focus {
+        width: 210px;
+        margin-left: -60px;
+        outline: none !important;
+    }
+
+    div#kopf div#suche input[type="submit"] {
+        width:60px;
+        padding: 3px 5px 3px 5px;
+        background: #DDD;
+        box-shadow: inset -2px -2px 2px rgba(0,0,0,.2);
+    }
+
+    div#kopf div#suche input[type="submit"]:hover {
+        background: #FFF;
+        box-shadow: inset 2px 2px 2px rgba(0,0,0,.2);
+    }
+
+    div#kopf div#suche input[type="submit"]:active {
+        background: #DDD;
+    }
+    /*  ------------------------------------------------------
+    NACHKOPF
+    --------------------------------------------------------*/
+    hr#nachkopf {
+        display: none;
+    }
+
+    /*  ------------------------------------------------------
+    MAIN
+    --------------------------------------------------------*/
+    div#main {
+        margin: 0 auto;
+        max-width: 1000px;
+        background-color: #fff;
+        padding: 20px;		
+        padding-top: 100px;
+        position: relative;
+        box-shadow: 0px 3px 4px rgba(0,0,0,0.2);
+        border-bottom: 30px solid #E3E3E3;
+        margin-bottom: 80px;
+        min-height: 330px;
+    }
+
+    div#main:after {
+    }
+
+
+    /*  ------------------------------------------------------
+    MAIN - BEREICHSMENUE
+    --------------------------------------------------------*/
+    div#menu {
+        width: 100%;
+        max-width: 1040px;
+        height: 40px;
+        background: #004874;
+        background: -webkit-gradient(linear, left top, left bottom, from(#0065a3), to(#004874));
+        background: -moz-linear-gradient(top, #0065a3, #004874);  
+        background: linear-gradient(top, #0065a3, #004874);  
+        position: absolute;
+        top: -40px;
+        left: 0px;
+    }
+
+
+    /* Fuer eine erste Ebene */	
+    ul#navigation {
+        min-width: 960px;
+    }
+
+    ul#navigation.fixed {
+        position: fixed;
+        top: 36px;
+        z-index: 10002;		
+    }
+
+    ul#navigation li {
+        font-size: 1em;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-weight: normal;
+    }
+
+    ul#navigation li dfn {
+        font-style: italic;
+    }
+
+    ul#navigation li a,
+    ul#navigation li a:link,
+    ul#navigation li span.aktiv  {		
+        float: left;
+        display: block;
+        padding: 10px 12px;
+        text-decoration: none;
+        background: #004874;
+        color:#fff;		
+        background: -webkit-gradient(linear, left top, left bottom, from(#0065a3), to(#004874));
+        background: -moz-linear-gradient(top, #0065a3, #004874);  
+        background: linear-gradient(top, #0065a3, #004874);  
+        border-right: 1px solid #005486;
+        font-size: 1em;
+        font-family: Georgia, "Times New Roman", Times, serif;
+    }
+
+    ul#navigation li.first a, 
+    ul#navigation li.first span.aktiv {
+    }
+    ul#navigation li.last a, 
+    ul#navigation li.last span.aktiv {
+        border-right: 0 !important;
+    }
+    ul#navigation li a:hover, 
+    ul#navigation li a:focus, 
+    ul#navigation li a:active {
+        background: #333333;
+        background: -webkit-gradient(linear, left top, left bottom, from(#004874), to(#333333));
+        background: -moz-linear-gradient(top, #004874, #333333);  
+        background: linear-gradient(top, #004874, #333333);  
+    }
+
+
+    /* Fuer eine zweite Ebene */
+    ul#navigation ul#hauptnavigation li {
+        float: left;
+        position: relative;
+    }
+    ul#navigation ul#hauptnavigation li a {
+    }
+    ul#navigation ul#hauptnavigation>li:hover>a,
+    ul#navigation ul#hauptnavigation>li.hover>a,
+    ul#navigation ul#hauptnavigation>li:hover>span>a,
+    ul#navigation ul#hauptnavigation>li.hover>span>a {
+        background: #333333;
+        background: -webkit-gradient(linear, left top, left bottom, from(#004874), to(#333333));
+        background: -moz-linear-gradient(top, #004874, #333333);  
+        background: linear-gradient(top, #004874, #333333);  
+    }
+
+    ul#navigation ul#hauptnavigation li span.aktiv, 
+    ul#navigation ul#hauptnavigation li a.aktiv {
+    }
+
+    /* Fuer eine dritte Ebene */
+    ul#navigation ul#hauptnavigation ul {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        z-index: 3;
+    }
+    ul#navigation ul#hauptnavigation>li>ul>li {
+        line-height:0.81em !important;	
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        font-size: 0.87em;
+        box-shadow: 0px 3px 4px rgba(0,0,0,0.2);
+        position:absolute;
+        left:-3000px;
+        top:-3000px;
+        width:1px;
+
+    }
+
+    ul#navigation ul#hauptnavigation>li:hover>ul>li,
+    ul#navigation ul#hauptnavigation>li.hover>ul>li {
+        width: auto;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    ul#navigation ul#hauptnavigation ul li a {
+    }
+    ul#navigation ul#hauptnavigation>li>ul>li>a, 
+    ul#navigation ul#hauptnavigation>li>ul>li>span {
+        width: 150px;
+        display: block;
+        padding: 10px 15px;
+        background: #333333;
+        border-bottom: 1px solid #555555;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+
+
+    ul#navigation ul#hauptnavigation li:hover ul li:hover a,
+    ul#navigation ul#hauptnavigation li.hover ul li.hover a {
+        background: #444444;
+    }
+
+    ul#navigation ul#hauptnavigation ul li span.aktiv {
+    }
+
+    /* Fuer eine vierte Ebene */
+    ul#navigation ul#hauptnavigation ul li ul {
+        position: absolute;
+        top: 0px;
+        left: 175px;
+        z-index: 4;
+    }
+
+    ul#navigation ul#hauptnavigation>li>ul>li>ul::before {
+        position: absolute;
+        top: 11px;
+        left: -15px;
+        z-index: 10;
+        content: "";
+        border: 4px solid #333;
+        border-left: 4px solid #FFF;
+    }	
+
+    ul#navigation ul#hauptnavigation>li:hover>ul>li:hover>ul::before,
+    ul#navigation ul#hauptnavigation>li.hover>ul>li.hover>ul::before {
+        border: 4px solid #444;
+        border-left: 4px solid #FFF;
+    }
+
+    ul#navigation ul#hauptnavigation>li>ul>li>ul>li {
+        box-shadow: 0px 3px 4px rgba(0,0,0,0.2);	
+        position:absolute;
+        left:-3000px;
+        top:-3000px;
+        width:1px;
+    }
+
+    ul#navigation ul#hauptnavigation>li>ul>li:hover>ul>li,
+    ul#navigation ul#hauptnavigation>li>ul>li.hover>ul>li  {		
+        position: relative;
+        top: 0;
+        left: 0;
+        width: auto;
+    }
+
+
+    ul#navigation ul#hauptnavigation>li:hover>ul>li:hover>ul>li a,
+    ul#navigation ul#hauptnavigation>li.hover>ul>li.hover>ul>li a {
+        width: 120px;
+        display: block;
+        padding: 7px 15px;
+        background: #333333;
+        border-bottom: 1px solid #555555;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+
+    ul#navigation ul#hauptnavigation>li:hover>ul>li:hover>ul>li:hover>a,
+    ul#navigation ul#hauptnavigation>li.hover>ul>li.hover>ul>li.hover>a {
+        background: #444444;
+    }
+
+    ul#navigation ul#hauptnavigation ul li ul li a, 
+    ul#navigation ul#hauptnavigation ul li ul li span {
+        padding: 4px 10px 4px 30px;
+        width: 120px !important;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    /* Fuer eine 5. Ebene */
+    ul#navigation ul#hauptnavigation ul li ul li ul {
+        left: 145px;
+    }
+
+    ul#navigation ul#hauptnavigation>li>ul>li>ul>li>ul>li {	
+        position:absolute;
+        left:-3000px;
+        top:-3000px;
+        width:1px;
+        box-shadow: 0px 3px 4px rgba(0,0,0,0.2);
+    }
+
+    ul#navigation ul#hauptnavigation>li>ul>li:hover>ul>li:hover>ul>li,
+    ul#navigation ul#hauptnavigation>li>ul>li.hover>ul>li.hover>ul>li {		
+        position: relative;
+        top: 0;
+        left: 0;
+        width: auto;
+    }
+
+    ul#navigation ul#hauptnavigation>li:hover>ul>li:hover>ul>li:hover>ul>li:hover>a,
+    ul#navigation ul#hauptnavigation>li.hover>ul>li.hover>ul>li.hover>ul>li.hover>a {
+        background: #444444;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+
+
+
+    ul#navigation ul#hauptnavigation>li>ul>li>ul>li>ul::before {
+        position: absolute;
+        top: 11px;
+        left: -15px;
+        z-index: 10;
+        content: "";
+        border: 4px solid #333;
+        border-left: 4px solid #FFF;
+    }	
+
+    ul#navigation ul#hauptnavigation>li:hover>ul>li:hover>ul>li:hover>ul::before,
+    ul#navigation ul#hauptnavigation>li.hover>ul>li.hover>ul>li.hover>ul::before {
+        border: 4px solid #444;
+        border-left: 4px solid #FFF;
+    }
+
+    ul#navigation ul#hauptnavigation ul li ul li a, 
+    ul#navigation ul#hauptnavigation ul li ul li span {
+        padding: 4px 10px 4px 40px;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    /* Fuer eine 6. Ebene */
+    ul#navigation ul#hauptnavigation>li>ul>li>ul>li>ul>li>ul>li {
+        position:absolute;
+        left:-3000px;
+        top:-3000px;
+        width:1px;
+        box-shadow: 0px 3px 4px rgba(0,0,0,0.2);
+    }
+
+    ul#navigation ul#hauptnavigation>li>ul>li:hover>ul>li:hover>ul>li:hover>ul>li,
+    ul#navigation ul#hauptnavigation>li>ul>li.hover>ul>li.hover>ul>li.hover>ul>li {	
+        position: relative;
+        top: 0;
+        left: 0;
+        width: auto;
+    }
+
+    ul#navigation ul#hauptnavigation>li:hover>ul>li:hover>ul>li:hover>ul>li:hover>ul>li:hover>a,	
+    ul#navigation ul#hauptnavigation>li.hover>ul>li.hover>ul>li.hover>ul>li.hover>ul>li.hover>a {
+        background: #444444;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+
+    ul#navigation ul#hauptnavigation>li>ul>li>ul>li>ul>li>ul::before {
+        position: absolute;
+        top: 11px;
+        left: -15px;
+        z-index: 10;
+        content: "";
+        border: 4px solid #333;
+        border-left: 4px solid #FFF;
+    }	
+
+    ul#navigation ul#hauptnavigation>li:hover>ul>li:hover>ul>li:hover>ul>li:hover>ul::before,
+    ul#navigation ul#hauptnavigation>li.hover>ul>li.hover>ul>li.hover>ul>li.hover>ul::before {
+        border: 4px solid #444;
+        border-left: 4px solid #FFF;
+    }
+
+
+    div#menu div#bereichsmenu  {
+    }	
+
+    div#menu div#bereichsmenu h2 {
+        position:absolute;
+        left:-3000px;
+        top:-3000px;
+        width:1px;
+    }
+
+    /* Definition fuer optionalen Infotext */ 
+    ul#navigation li .infotext {
+        display: none;
+    }
+
+
+    /*  ------------------------------------------------------
+    MAIN - MENU - KURZINFO
+    --------------------------------------------------------*/
+    div#main div#menu div#kurzinfo {
+        display: none;
+    }
+
+    div#main div#menu div#kurzinfo h2 {
+        font-size: 1.1em;
+        font-weight: bold;
+        color: #2D2D2D;
+        margin-top: 15px;
+    }
+
+    div#main div#menu div#kurzinfo h4{
+        margin-bottom:1em;
+    }
+
+    div#main div#menu div#kurzinfo p {
+        margin: 10px 0 16px 0;
+        line-height: 180%;
+        font-size: 0.7em;
+        color: #666;
+    }
+    div#main div#menu div#kurzinfo div {
+        padding: 0px 0px;
+    }
+
+
+    /*  ------------------------------------------------------
+    MAIN - MENU - KURZINFO - WIDGETS
+    --------------------------------------------------------*/
+
+    div#main div#menu div#kurzinfo h4 > ul {
+        padding-bottom: 0.5em;
+    }
+
+
+    div#main div#menu div#kurzinfo h4{
+        color: #7A7A7A;
+        font-size: 0.8em;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        width: auto;
+    }
+    
+    div#main div#menu div#kurzinfo h4:first-of-type{
+        margin-top:0.8em;
+    }
+    
+    div#main div#menu div#kurzinfo ul li a {		
+        display: block;
+        padding: 4px 5px 4px 25px;
+        width: auto;
+        background-color: #FAFAFA;
+        border: 1px solid #CCC;
+        border-top: 0;
+        box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+        font-size: 0.8em;
+        color: #333;
+        text-decoration: none;
+        position: relative;
+    }
+
+    div#main div#menu div#kurzinfo ul ul li a {
+        padding-left: 40px;
+    }
+
+    div#main div#menu div#kurzinfo  ul li a:hover,
+    div#main div#menu div#kurzinfo  ul li a:focus,
+    div#main div#menu div#kurzinfo  ul li a:active {
+        background-color: #EEE;
+        color: #333;
+        text-decoration: none;
+    }
+
+    div#main div#menu div#kurzinfo  ul li a::before {
+        position: absolute;
+        top: 11px;
+        left: 10px;
+        z-index: 10;
+        content: "";
+        border: 4px solid #FAFAFA;
+        border-left: 4px solid #333;
+    }	
+
+    div#main div#menu div#kurzinfo  ul ul li a::before {
+        left: 25px;
+    }	
+
+    div#main div#menu div#kurzinfo  ul li a:hover::before,
+    div#main div#menu div#kurzinfo  ul li a:focus::before,
+    div#main div#menu div#kurzinfo  ul li a:active::before {
+        position: absolute;
+        top: 11px;
+        left: 10px;
+        z-index: 10;
+        content: "";
+        border: 4px solid #EEE;
+        border-left: 4px solid #333;
+    }	
+
+    div#main div#menu div#kurzinfo  ul ul li a:hover::before,
+    div#main div#menu div#kurzinfo  ul ul li a:focus::before,
+    div#main div#menu div#kurzinfo  ul ul li a:active::before {
+        left: 25px;
+    }	
+
+
+    div#main div#menu div#kurzinfo  ul li:first-child {		
+        border-top: 1px solid #CCC;
+    }
+
+    div#main div#menu div#kurzinfo  ul li:last-child {		
+        margin-bottom: 1em;
+    }
+
+    div#main div#menu div#kurzinfo div{
+        margin-top:2em;
+    }
+    /*  ------------------------------------------------------
+    MAIN - MENU - CONTENT
+    --------------------------------------------------------*/
+    div#content { 
+    } 
+
+    div#content div#ls {
+        float: left;
+        width: 48%;
+    }
+
+    div#content div#rs {
+        float: right;
+        width: 48%;
+    }
+
+    /*  ------------------------------------------------------
+    MAIN - MENU - INHALTSINFO
+    --------------------------------------------------------*/
+    div#main div#inhaltsinfo {
+    }
+
+    /*  ------------------------------------------------------
+    MAIN - SIDEBAR
+    --------------------------------------------------------*/
+    div#main div#sidebar {
+        display: none;
+    }
+
+    /*  ------------------------------------------------------
+    VORFOOTER
+    --------------------------------------------------------*/
+    hr#vorfooter {
+        display: none;
+    }
+
+    /*  ------------------------------------------------------
+    FOOTER
+    --------------------------------------------------------*/
+    div#footer { 	
+        background-color: #171717;
+        position: relative;
+    }
+
+    div#footer h2 {
+        margin: 10px 0;
+        font: 0.76em "Lucida Sans", "Lucida Sans Unicode", "Verdana", sans-serif;
+        font-weight: bold;
+        display: none;
+        color: #666;
+    }
+
+
+    div#footer p.last_modified {
+        font-size: 0.7em;
+        max-width: 1020px;
+        margin: 0 auto;
+        display: block;
+        text-align: right; 
+        color: #AAA;
+        padding: 10px;
+    }
+
+    /*  ------------------------------------------------------
+    FOOTER - FOOTERINFOS
+    --------------------------------------------------------*/
+    div#footer div#footerinfos {
+        background-color: #222;
+        background: -webkit-gradient(linear, left top, left bottom, from(#222), to(#353535));
+        background: -moz-linear-gradient(top, #222, #353535);  
+        background: linear-gradient(top, #222, #353535);  
+    }
+
+    /*  ------------------------------------------------------
+    FOOTER - FOOTERINFOS - TECMENUE
+    --------------------------------------------------------*/
+    div#footer div#footerinfos div#tecmenu {
+        padding: 6px 0;
+        padding-right: 0;
+        text-align: left;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    } 
+
+    div#footer div#footerinfos div#tecmenu h2 {
+        position:absolute;
+        left:-3000px;
+        top:-3000px;
+        width:1px;
+    }
+
+    div#footer div#footerinfos div#tecmenu ul {
+        max-width: 1040px;
+        margin: 0 auto;
+    }
+
+    div#footer div#footerinfos div#tecmenu ul li {
+        display: inline;
+        line-height:0.87em !important;
+    } 
+
+    div#footer div#footerinfos div#tecmenu ul li span,
+    div#footer div#footerinfos div#tecmenu ul li a, 
+    div#footer div#footerinfos div#tecmenu ul li a:link {
+        font-size: 0.74em;
+        text-decoration: none;
+        padding: 0 10px;
+        color: #EEE;
+    }
+
+    div#footer div#footerinfos div#tecmenu ul li.last span,
+    div#footer div#footerinfos div#tecmenu ul li.last a, 
+    div#footer div#footerinfos div#tecmenu ul li.last a:link {
+        border-right: 0 none;
+    }
+    div#footer div#footerinfos div#tecmenu ul li span.acckey {
+        position: absolute;
+        left:-3000px;
+        top:-3000px;
+        width: 1px;
+    }
+
+    div#footer div#footerinfos div#tecmenu ul li a:visited {
+    }
+
+    div#footer div#footerinfos div#tecmenu ul li a:hover {
+        text-decoration: underline;
+    }
+
+    div#footer div#footerinfos div#tecmenu ul li a:focus, 
+    div#footer div#footerinfos div#tecmenu ul li a:active {
+        text-decoration: underline;
+        color: #DFF3FF;
+    }
+
+    div#footer div#footerinfos div#tecmenu ul li span {
+        color: #AAA;
+    }
+
+    /*  ------------------------------------------------------
+    FOOTER - FOOTERINFOS - FLAGGEN
+    --------------------------------------------------------*/
+    div#footer div#footerinfos div#flaggen, 
+    div#footer div#footerinfos div.flaggen, 
+    div#footer div#footerinfos div#languagebar {
+        position: absolute;
+        top: 185px;
+        right: 20px;
+        z-index: 2;
+    }
+
+    div#footer div#footerinfos div#flaggen li, 
+    div#footer div#footerinfos div.flaggen li, 
+    div#footer div#footerinfos div#languagebar li {
+        list-style: none;
+        float: left;
+        padding-left: 10px;
+    }
+
+    div#footer div#footerinfos div#flaggen li.active img, 
+    div#footer div#footerinfos div.flaggen li.active img, 
+    div#footer div#footerinfos div#languagebar li.active img {
+        opacity: 0.3;
+    }
+
+    div#flaggen, 
+    div.flaggen, 
+    div#languagebar {
+        position: absolute;
+        top: 35px;
+        right: 20px;
+        z-index: 2;
+    }
+
+    div#flaggen li, 
+    div.flaggen li, 
+    div#languagebar li {
+        list-style: none;
+        float: left;
+        padding-left: 10px;
+    }
+
+    div#flaggen li.active img, 
+    div.flaggen li.active img, 
+    div#languagebar li.active img {
+        opacity: 0.3;
+    }
+
+    div#content div#flaggen,
+    div#content div.flaggen,
+    div#content div#languagebar {
+        float: right;
+        position: static;
+        margin-top: -60px;
+    }
+
+
+    /*  ------------------------------------------------------
+    FOOTER - FOOTERINFOS - ZUSATZINFO
+    --------------------------------------------------------*/
+    div#footer div#footerinfos div#zusatzinfo {
+        font-size: 0.76em;
+        max-width: 1020px;
+        margin: 0 auto;
+        display: block;
+        text-align: left; 
+        color: #AAA;
+        padding: 10px;
+        padding-bottom: 2em;
+    }
+
+    div#footer div#footerinfos div#zusatzinfo p {
+        margin-right: 300px;
+    }
+
+    div#footer div#footerinfos div#zusatzinfo a {
+        color: #DDD;
+        text-decoration: underline;
+    }
+
+    div#footer div#footerinfos div#zusatzinfo a:hover {		
+        color: #FFF;
+        text-decoration: underline;
+    }
+
+    div#footer div#footerinfos div#zusatzinfo h3 {
+        color: #CCC;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        border-bottom: 1px solid #333;
+        margin-bottom: 1em;
+        margin-top: 0.2em;
+        padding-bottom: 0.2em;
+        font-weight: normal;
+        font-size: 1.5em;
+        font-style: italic;
+    }
+
+    div#footer div#footerinfos div#zusatzinfo p.skip a,
+    div#footer div#footerinfos div#zusatzinfo p.skip a:link, 
+    div#footer div#footerinfos div#zusatzinfo p.skip a:visited {
+        color: white;}
+
+    div#footer div#footerinfos div#zusatzinfo p.skip a:hover, 
+    div#footer div#footerinfos div#zusatzinfo p.skip a:focus, 
+    div#footer div#footerinfos div#zusatzinfo p.skip a:active {
+        border-bottom: #003366 1px solid;
+        background: #003366;}
+
+    div#footer div#footerinfos div#zusatzinfo p.skip a:focus, 
+    div#footer div#footerinfos div#zusatzinfo p.skip a:active {
+        background: #003366;
+        color: #FFFFFF;
+        border-bottom: #003366 1px solid;
+    }
+
+    /*  ------------------------------------------------------
+    FOOTER - FOOTERINFOS - ZUSATZINFO - STYLESWITCHER
+    --------------------------------------------------------*/
+    div#footer div#footerinfos div#zusatzinfo div.styleswitcher {
+        position: absolute;
+        top: 20px;
+        right:10px;
+        width: 500px;
+    }
+
+    div#footer div#footerinfos div#zusatzinfo div.styleswitcher h3 {
+        display: none;
+    }
+
+    div#footer div#footerinfos div#zusatzinfo div.styleswitcher ul  li {  
+        display: inline;
+    } 
+
+    div#footer div#footerinfos div#zusatzinfo div.styleswitcher ul  li a {  
+        font-size: 0.7em;
+        padding: 2px;
+    }
+
+    div#footer div#footerinfos div#zusatzinfo div.styleswitcher ul li a,
+    div#footer div#footerinfos div#zusatzinfo div.styleswitcher ul li a:link, 
+    div#footer div#footerinfos div#zusatzinfo div.styleswitcher ul li a:visited {
+        color: #333;
+        border: #666 1px solid;
+        background: #fff;
+        text-decoration: none;
+    }
+
+    div#footer div#footerinfos div#zusatzinfo div.styleswitcher ul li a:hover, 
+    div#footer div#footerinfos div#zusatzinfo div.styleswitcher ul li a:focus, 
+    div#footer div#footerinfos div#zusatzinfo div.styleswitcher ul li a:active {
+        border: #666 1px solid;
+        background: #f0f0f0;
+    }
+
+
+
+    /*  ------------------------------------------------------
+    FOOTER - FOOTERINFOS - ZUSATZINFO - AKTUELLES
+    --------------------------------------------------------*/
+    div#footer div#footerinfos div#zusatzinfo {
+    }
+
+
+
+    div#footer div#footerinfos div#zusatzinfo h1 {
+        color: #666;
+        font-size:0.80em;
+        font-weight: bold;
+        font-family: "Verdana", "Arial", sans-serif !important;
+        padding-bottom: 5px;
+    }
+    div#footer div#footerinfos div#zusatzinfo div.box {
+        background: #E9EFF2;
+        border: 1px solid #D1D1D1;
+        position:relative;
+        /* padding:0px 5px 0px 5px; */
+        margin: 0px 0px 40px 0px;
+    }
+    div#footer div#footerinfos div#zusatzinfo div.box p {
+        color:#333333;
+    }
+    div#footer div#footerinfos  div#zusatzinfo div.box div.aktuelles * {
+    }
+    div#footer div#footerinfos  div#zusatzinfo div.box div.aktuellescontainer * {
+        margin: 0px 3px 5px 3px;
+    }
+    div#footer div#footerinfos  div#zusatzinfo div.box div.aktuellesheader * {
+        color:#D37100;
+        text-decoration:underline;
+    }
+    div#footer div#footerinfos  div#zusatzinfo div.box div.aktuellescontent * {
+    }
+    div#footer div#footerinfos  div#zusatzinfo div.box div.aktuellescontent ul {
+        margin: 5px 5px 5px 5px;
+        padding: 0px 0px 0px 10px;
+    }
+    div#footer div#footerinfos  div#zusatzinfo div.box div.aktuelleslink * {
+        text-align:right;
+        color:#666666;
+        font-weight:bold;
+    }
+    div#footer div#footerinfos  div#zusatzinfo div.box * {
+        text-align: left;
+    }
+
+    div#footer div#footerinfos  div#zusatzinfo div.box h1 {
+    }
+
+    div#footer div#footerinfos  div#zusatzinfo div.box h2 {
+        display:block;
+        position:relative;
+        left:-5px;
+        top:0px;
+        width:1px;
+    }
+
+    div#footerinfos div#zusatzinfo div.box ul li {
+        font-size:0.8em;
+        list-style-type:disc;
+        margin:0pt 0pt 5px 15px;
+    }
+
+    div#footerinfos div#zusatzinfo div.box ul li a, div#footerinfos div#zusatzinfo div.box ul li a:link {
+        color:#666666;
+        text-decoration:underline;
+    }
+
+    div#footerinfos div#zusatzinfo div.box ul li a:visited {
+        color:#666666;
+    }
+
+    div#footerinfos div#zusatzinfo div.box ul li a:hover, div#footerinfos div#zusatzinfo div.box ul li a:focus, div#footerinfos div#zusatzinfo div.box ul li a:active {
+        color:#333333;
+        text-decoration:underline;
+    }
+
+    div#footerinfos div#zusatzinfo div.box ul li a:focus, div#footerinfos div#zusatzinfo div.box ul li a:active {
+        color:#999999;
+    }
+
+    div#footer div#footerinfos div#zusatzinfo div.box p.skip {
+        position:static;
+        width: 97%;
+        text-align: right;
+    }
+
+
+
+
+
+
+
+
+
+
+    /*  ------------------------------------------------------
+    FeedImport
+    --------------------------------------------------------*/
+    div.feedrahmen {
+    }
+
+    div.feedrahmen h2 {
+        padding: 0px 6px 0 0px;
+        margin: 0px 0 0px 0;
+        font-weight:700;
+        line-height:140%;
+        border-bottom: 1px solid #ccc !important;
+    }
+
+    div.feedrahmen .feedeintrag {
+        margin: 0em 0em 1.5em;
+        display:table; width:100%;
+    }
+
+    div.feedeintrag h3{
+        background-color: #f0f0f0;
+        padding: 0.5em;
+        display: block;
+        font-weight: bold;
+        font-size: 0.8em !important;
+    }
+
+    div.feedeintrag h4,div.feedeintrag h5{
+        padding: 1em 0em 0.5em 0em;
+        display: block;
+        font-weight: bold;
+        font-size: 1em !important;
+    }
+
+    div.feedeintrag div.feedcontent {
+        font-size: 0.8em;
+        min-height: 85px;
+
+        line-height:140%;
+    }
+
+    div.feedeintrag div.feedcontent h3{
+
+        background-color: #ffffff;
+        padding: 0em;
+        display: block;
+        font-weight: bold;
+        font-size: 1em !important;
+    }
+
+    div.feedeintrag div.feedcontent p { 
+        font-size: 1em !important;
+        line-height: 160% !important; 
+    }
+
+    div.feedeintrag div.feedcontent ul li { 
+        font-size: 1.2em !important;
+    }
+
+    div.feedeintrag p.feedinfo,div.feedeintrag p.datum,div.feedeintrag div.feedcontent p.datum,
+    div#content div.feedeintrag div.feedcontent p.datum,div.feedeintrag div.feedlink p.datum,div.feedeintrag p.feedlink {
+        color: #111;
+        font-style: oblique;
+    }
+
+    div.feedeintrag p.feedlink  {
+        margin: 1em !important;	
+    }
+
+    div.feedeintrag p.feedinfo {
+        margin: 0em !important;
+        margin-top: 1em !important;
+    }
+
+    div.feedeintrag p strong {
+        font-weight: bold;
+    }
+
+    div#feedeintrag .bildrechts {
+        float: right;
+        margin: 0;
+        padding: 1px 6px 0 6px;
+    }
+
+    div.feedeintrag img {
+        float: right;
+        margin:0px 0px 5px 5px;
+    }
+
+    div.feedrahmen ul.jahresliste li ul,
+    div.feedrahmen ul.monatsliste li ul {
+        margin: 5px;
+        padding: 5px;
+    }
+
+    div.feedrahmen ul.jahresliste li ul li,
+    div.feedrahmen ul.monatsliste li {
+        display: inline;
+        list-style-image: none;	
+        padding: 0 3px;	
+    }
+
+    .feedrahmen .jahreskalender {
+        width: 660px;
+    }
+
+    .feedrahmen .jahreskalender h2 {
+        font-size: 1.2em ;
+        padding: 0.3em;
+        display: block;
+    }
+
+    .feedrahmen .jahreskalender table {
+        display: inline;
+        min-width: 220px;
+        margin: 5px;
+    }
+
+    .feedrahmen table.calendar {
+        border: 1px solid #eee;
+        border-spacing: 0;
+        empty-cells: show;
+        border-collapse: separate;
+        border: 1px solid #eee;
+        background-color: white;
+        text-align:center;
+    }
+
+    .feedrahmen table.calendar caption {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .feedrahmen table.calendar th {
+        background-color: #ddd;
+    }
+
+    .feedrahmen table.calendar td {
+        text-align: left;
+        border: 1px solid #eee;
+        padding: 2px;
+    }
+
+    .feedrahmen table.calendar td.weekend {
+        background-color: #eee;
+        border: 1px solid #ddd;       
+    }
+
+    .feedrahmen table.calendar td.current {
+        border: 1px solid red;
+        font-weight:bold;
+        color:#c00;
+        position:absolute;
+        z-index:10;
+    }
+    .feedrahmen table.calendar td:hover {
+        border: 1px solid #ccc;
+        background-color: #ddd;
+    }
+    .feedrahmen table.calendar td.used {
+        font-weight:bold;
+        background-color: #ccc;
+    }
+
+    .feedrahmen table.empty caption {
+        color:#ccc;
+    }
+
+    .feedrahmen table.empty th{
+        color:#fff;
+    }
+
+    .feedrahmen table.current caption{
+        color:#c00;
+    }
+
+    /*  ------------------------------------------------------
+    JQUERY - SLIDE DOWN
+    --------------------------------------------------------*/
+    div#content ul.jquery_list {
+        list-style-type: none;
+        padding: 0px;
+        font-size:1.0em;
+        line-height:180%;
+        margin:10px 0px 30px;
+    }
+    .jquery_list li {
+        list-style-type: none;
+    }
+    .jquery_head {
+    }
+    .jquery_body {
+    }
+    /*  ------------------------------------------------------
+    MELDUNGEN
+    --------------------------------------------------------*/
+    #content div.meldung {
+        border: 1px solid #D5DADD;
+        background-color: #F4F3EB;
+        background-image: url(/grafiken/techfak/buttons_transparent.gif);
+        background-repeat: no-repeat;
+        padding: 20px 0px 0px 25px;
+        background-position: 2px 2px;
+        margin: 10px 0px 0px 0px;
+        min-height: 120px;
+    }
+
+    .ok {
+        border: 1px solid #F79C07;
+        text-align: center;
+        background-color: #F79C07;
+    }
+}

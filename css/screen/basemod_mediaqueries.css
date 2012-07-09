@@ -1,0 +1,670 @@
+/**
+ * Projekt Vorlagenkatalog 
+ *
+ * Basisstylesheet HTML5
+ *
+ * @mod_name        mediaqueries
+ * @mod_desc        Zusatzdesign für kleinere Bildschirmgrößen
+ *
+ * @copyright       Copyright 2005-2011, RRZE
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/)
+ * @link            http://www.vorlagen.uni-erlangen.de
+ * @package         css
+ * @version         1.0
+ * @lastmodified    04/2012
+ */
+
+@media screen and (max-width: 480px) {
+    /* Definitionen nur für maximale Fenster- bzw. Bildschirmbreite von 480px - Standard für Smartphones */
+  
+	/*  ------------------------------------------------------
+	GENERAL
+	--------------------------------------------------------*/
+	
+	body {
+		max-width: 480px;	
+		overflow: auto;	
+    	-webkit-text-size-adjust: none; /* Wichtig für iPhone im Landscape Mode */
+	}
+	
+	div#seite {  
+		border-width: 0 !important;
+		min-width: 0;
+	}
+	
+	img{
+        max-width:100%;
+        height:auto;
+    }
+	
+	div {
+		width: auto;
+	}
+	
+	
+	/*  ------------------------------------------------------
+	INITIALIZE MENU
+	--------------------------------------------------------*/
+	
+	/* Fuer eine erste Ebene */	
+	ul#navigation {
+		list-style-type: none;
+		font-size: 0.9em;
+		margin: 0;
+		min-width: 0;
+	}
+	
+	ul#navigation li {
+		float: none !important;
+		width: 100%;
+		border-top-style: solid;
+		border-top-width: 1px;
+		margin-left: 0;
+		border-color: #d1d1d1;
+		position: static !important;
+		display: block !important;
+	}
+	
+	
+	ul#navigation li dfn {
+		font-style: normal;
+	}
+	
+	ul#navigation li a,
+	ul#navigation li a:link  {
+		float: none;
+		display: block;
+		padding: 3px 10px;
+		text-decoration: none;
+		border-left-style: solid;
+		border-left-width: 4px;
+		border-top-style: solid;
+		border-top-width: 1px;
+		color: #fff;
+		border-left-color: #B51D1D;
+		border-top-color: #fff;
+		display: block !important;
+		position: static !important;
+		font-family:Arial, Helvetica, sans-serif !important;
+	/*	background: #F0F0F0 url(/grafiken/d7/bullet.gif) no-repeat 98% 50%; */
+	}
+	
+
+	ul#navigation li a:hover, 
+	ul#navigation li a:focus, 
+	ul#navigation li a:active {
+		background-color: #af5757; /* url(/grafiken/d7/bullet_h.gif) no-repeat 98% 50%; */ 
+		color: white;
+		display: block !important;
+		position: static !important;
+		font-family:Arial, Helvetica, sans-serif !important;
+	}
+	
+	ul#navigation li a:focus, 
+	ul#navigation li a:active {
+		font-weight: bold;
+		display: block !important;
+		position: static !important;
+		font-family:Arial, Helvetica, sans-serif !important;
+	}
+	
+	ul#navigation li span.aktiv {
+		display: block;
+		padding: 3px 10px;
+		text-decoration: none;
+		font-weight: bold;
+		border-left-width: 4px; 
+		border-left-style: solid; 
+		border-left-color: #B51D1D;
+		background: #fff url(/grafiken/d7/bullet_down.gif) no-repeat 98% 50%;
+		display: block !important;
+		position: static !important;
+		font-family:Arial, Helvetica, sans-serif !important;
+	}
+	
+	ul#navigation li .infotext {
+		display: none;
+	}
+	ul#navigation li .infolink:hover {
+		display: inline;
+	}
+	ul#navigation li .infolink:hover .infotext {
+		display: block;
+		position: absolute;
+		left: 230px;
+		padding: 0.5em;
+		width: 250px;
+		line-height: 1.1em;
+		font-size: 1em;
+		z-index: 20; 
+		color: #000;
+		border: 1px solid #d1d1d1;
+		background-color: #F0F0F0;
+	}
+	
+	ul#navigation ul {
+		list-style-type: none;
+		margin:0;
+		font-size: 1em;
+		display: block !important;
+		position: static !important;
+	}
+	
+	/* Fuer eine zweite Ebene */
+	ul#navigation ul#hauptnavigation {
+		float: none;
+		display: block !important;
+		position: static !important;
+	}
+	
+	ul#navigation ul#hauptnavigation li a {
+		border-left-width: 4px !important;
+		border-left-style: solid !important;
+		border-left-color: #0E4584 !important;
+		background: #F0F0F0 !important;
+		display: block !important;
+		position: static !important;
+		width: auto  !important;
+		color: #222;
+		font-family:Arial, Helvetica, sans-serif !important;
+	}
+	
+	ul#navigation ul#hauptnavigation li span.aktiv {
+		border-left-width: 4px;
+		border-left-style: solid;
+		border-left-color: #0E4584;
+		background: #fff url(/grafiken/d7/bullet_down.gif) no-repeat 98% 50%;
+		display: block !important;
+		position: static !important;
+		font-family:Arial, Helvetica, sans-serif !important;
+	}
+	
+	ul#navigation ul#hauptnavigation li a:hover, 
+	ul#navigation ul#hauptnavigation li a:focus, 
+	ul#navigation ul#hauptnavigation li a:active {
+		color: white !important;
+		background-color: #47627F !important; 
+		width: auto  !important;
+		display: block !important;
+		position: static !important;
+	}
+	
+	
+	/* Fuer eine dritte Ebene */
+	ul#navigation ul#hauptnavigation ul {
+		position: static !important;
+		top: 0;
+		display: block !important;
+	}
+	
+	
+	ul#navigation ul#hauptnavigation ul li {
+		width: 100% !important;
+		line-height: normal !important;
+	}
+	
+	ul#navigation ul#hauptnavigation ul li a {
+		padding: 2px 10px 2px 26px !important;
+		border-left-width: 4px !important;
+		border-left-style: solid !important;
+		border-left-color: #A9B9C6 !important;
+		background: #fff !important;
+		width: auto  !important;
+		display: block !important;
+		position: static !important;
+	}
+	
+	ul#navigation ul#hauptnavigation ul li span {
+		padding: 2px 10px 2px 26px !important;
+		border-left-width: 4px !important;
+		border-left-style: solid !important;
+		border-left-color: #A9B9C6 !important;
+		background: #fff !important;
+		width: auto  !important;
+		display: block;
+		position: static !important;
+	}
+		
+	
+	ul#navigation ul#hauptnavigation ul li span.aktiv {
+		border-left-width: 4px !important;
+		border-left-style: solid !important;
+		border-left-color: #A9B9C6 !important;
+		width:  auto  !important;
+		display: block !important;
+		position: static !important;
+	}
+	ul#navigation ul#hauptnavigation li ul li a, 
+	ul#navigation ul#hauptnavigation li ul li span {
+		border-bottom: 1px solid #aaa !important;
+		padding-top: 5px !important;
+		padding-bottom: 5px !important;
+	}
+	
+	/* Fuer eine vierte Ebene */	
+	ul#navigation ul#hauptnavigation ul li ul li a {
+		padding: 2px 10px 2px 41px !important;
+		display: block !important;
+		position: static !important;
+		width: auto  !important;
+		border-bottom: 1px solid #aaa !important;
+		font-family:Arial, Helvetica, sans-serif !important;
+		font-size: 1em !important;
+	}
+	
+	ul#navigation ul#hauptnavigation ul li ul li span {
+		padding: 2px 10px 2px 41px !important;
+		display: block;
+		position: static !important;
+		width: auto  !important;
+		border-bottom: 1px solid #aaa !important;
+		font-family:Arial, Helvetica, sans-serif !important;
+		font-size: 1em !important;
+	}
+	
+	
+	
+	
+	/* Fuer eine 5. Ebene */
+	ul#navigation ul#hauptnavigation ul li ul li ul li a {
+		padding: 2px 10px 2px 56px;
+		display: block !important;
+		position: static !important;
+		width: auto  !important;
+	}
+	
+	ul#navigation ul#hauptnavigation ul li ul li ul li span {
+		padding: 2px 10px 2px 56px;
+		display: block;
+		position: static !important;
+		width: auto  !important;
+	}
+	/* Fuer eine 6. Ebene */
+	ul#navigation ul#hauptnavigation ul li ul li ul li ul li a {
+		padding: 2px 10px 2px 71px;
+		display: block !important;
+		position: static !important;
+		width: auto  !important;
+	}
+	
+	ul#navigation ul#hauptnavigation ul li ul li ul li ul li span {
+		padding: 2px 10px 2px 71px;
+		display: block;
+		position: static !important;
+		width: auto  !important;
+	}
+	
+	ul#navigation .skip {
+		display: none !important;
+	}
+	
+	
+	/*  ------------------------------------------------------
+	HEADER
+	--------------------------------------------------------*/
+	
+	div#kopf {
+		padding-bottom: 10px !important;
+		min-width: 0;
+		position: relative;
+		height: auto !important;
+	}
+	
+		
+	div#kopf div#logo {
+		background-position: -50px 0;
+		height: auto;
+		padding-bottom: 30px;
+		clear: both;
+		min-height: 88px !important;
+	}
+		
+	div#kopf div#logo img {
+		padding-left: 15px;
+		padding-top: 10px;
+		max-width: 90%;
+		height: auto;
+		float: none;
+	}
+	
+		
+	div#kopf div#logo p {
+		width: auto;
+		padding-left: 15px;
+		padding-top: 10px;
+		float:none;
+		font-size: 140%;
+		line-height: 120%;
+	}
+	
+	div#kopf div#titel {
+		position: static;
+		padding-bottom: 10px;
+		background-color: #F9F9F9;
+	}
+	
+	div#kopf div#titel h1 {
+		color: #333;
+		font-size: 1.2em;
+		font-weight: bold;
+		display: block;
+		padding: 5px 5px 5px 15px;
+		background-color: #F9F9F9;
+	}
+	
+	body#start div#kopf div#titel h1 {
+		margin-top: 10px !important;
+	}
+	
+	div#kopf div#sprungmarken ul {
+		margin-top: -9px;
+	}
+	
+	
+	div#kopf div#breadcrumb {
+		display: block;
+		position: static;
+	}
+	
+	div#kopf div#breadcrumb p {
+		display: block;
+		overflow: hidden;
+	}
+	
+	div#kopf div#breadcrumb h2 {
+		display: none;
+	}
+	
+	div#kopf div#breadcrumb a:hover {
+		font-weight: normal;
+		text-decoration: underline;
+	}
+	
+	
+	div#sprungmarken {
+		display: block;
+		position: static !important;	
+	}
+	
+	div#sprungmarken li.first a:link, div#sprungmarken li.first a:visited  {
+		display: block !important;
+		position: relative !important;
+		width: auto !important;
+		height: auto !important;
+		font-size: 0.9em !important;
+		left: 0;
+		top: 10px !important;
+		z-index: 5;
+		padding: 7px 0px 10px 30px;
+		text-decoration: none;
+		background: url(/img/breadcrumbarrow.gif) no-repeat 10px 13px #EEE;
+		font-weight: bold;
+		border-bottom: 1px solid #DDD;
+		color: #333;
+	}
+	
+	div#sprungmarken li.first a:hover  {
+		text-decoration: underline !important;
+		color: #003366 !important;
+		width: auto !important;
+		height: auto !important;
+		padding: 7px 0px 10px 30px !important;		
+		background: url(/img/breadcrumbarrow.gif) no-repeat 10px 13px #DDD !important;	
+		text-align: left !important;
+		border: 0 !important;		
+		border-bottom: 1px solid #DDD !important;
+	}
+		
+	div#kopf div#hauptmenu ul {
+		padding: 0;
+		padding-top: 10px;
+		min-width: 0;
+		width: auto;
+		margin-top: 1px;
+	}
+	
+	div#kopf div#hauptmenu ul li{
+		display: block !important;
+		list-style-image: none !important;
+		padding: 0 !important;
+		
+	}
+	
+	div#kopf div#hauptmenu ul li a:link, div#kopf div#hauptmenu ul li a:visited, div#kopf div#hauptmenu ul li span {
+		margin: 0;
+		width: 100%;
+		text-align: center;
+		padding-left: 0;
+		padding-right: 0;
+		padding: 8px 0;
+		background-color: #BBB;
+		display: block;
+		float: left;
+		border-bottom: #D4D4D4 1px solid;
+	}
+	
+	div#kopf div#hauptmenu ul li a:hover {
+		background-color: #646464;
+		color: #FFF;
+		text-decoration: none;
+	}
+	
+	/*  ------------------------------------------------------
+	MAIN
+	--------------------------------------------------------*/
+	
+	div#main {
+		border: 0 !important;
+		min-height: 0;
+		position: static;
+		margin-top: 0;
+		padding: 10px;
+		margin-bottom: 0;
+	}
+	
+	div#menu {
+		margin-bottom: 0;
+		display: block;
+		clear: both;
+		margin-top: 0;
+		position: static !important;
+		height: auto !important;
+	}
+	
+	div#menu div#bereichsmenu {
+    	width: 100% !important;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	
+	div#menu div#kurzinfo {
+		display: none;
+	}
+	
+	div#menu, div#menu div#bereichsmenu, div#menu li {
+		border: 0;
+	}
+	
+	div#content {
+		position: static;
+		margin-top: 0 !important;
+		margin-left: 0 !important;
+		margin-bottom: 0 !important;
+		margin-right: 0 !important;
+		width: 97% !important;		
+		overflow: auto;
+		clear: both;
+		padding: 0 !important;
+	}
+	
+	div#content h2 {
+	    width: 100%;
+	}
+	
+	div#content a#contentmarke {
+		display: block;
+		margin-top: 10px;
+	}
+	/*  ------------------------------------------------------
+	FOOTER
+	--------------------------------------------------------*/
+	
+	div#footer {
+		padding: 0;
+	}
+	
+	div#footer div#footerinfos div#tecmenu {
+		margin-left: 0;
+		position: static;
+		text-align: left;
+		width: auto;
+		right: 0;
+		font-size: 90%;
+	}
+	
+	div#footer #footermarke {
+		display: none;
+	}
+	div#footer div#footerinfos div#tecmenu ul {
+		margin-left: 10px !important;
+	}
+	
+	div#footer div#footerinfos div#tecmenu ul li span, div#footer div#footerinfos div#tecmenu ul li a, div#footer div#footerinfos div#tecmenu ul li a:link {
+		padding-left: 0;
+	}
+	
+	div#footer p.last_modified {
+		display: none;
+	}
+	
+	div#footer>p {
+		visibility: hidden;
+	}
+	
+	/*  ------------------------------------------------------
+	SUBTEMPLATES
+	--------------------------------------------------------*/
+	
+	.subcolumns { display:block; width:100%; table-layout: auto; }
+    .subcolumns_oldgecko { width: 100%; float:none; }
+
+    .c20l, .c25l, .c33l, .c40l, .c38l, .c50l, .c60l, .c62l, .c66l, .c75l, .c80l { float:none; width: 100%; }
+    .c20r, .c25r, .c33r, .c40r, .c38r, .c50r, .c60r, .c66r, .c62r, .c75r, .c80r { float:none; margin-left:0; width: 100%; }
+	
+	.subc  { padding:0; }
+    .subcl { padding:0; }
+    .subcr { padding:0; }
+	
+	/*  ------------------------------------------------------
+	MISC
+	--------------------------------------------------------*/
+	
+	div#kurzinfo {
+		display: none !important;
+	}
+	
+	div#main > aside {
+		float: none !important;
+		margin-top: 10px !important;
+		margin: 10px 0 !important;
+		width: auto !important;
+	}
+	
+	div#sidebar {
+		margin-top: 0 !important;
+	}
+	
+	div#zusatzinfo {
+		position: static !important;
+		width: auto !important;
+		margin-top: 10px !important;
+		border-style: solid !important;
+		border-width: 1px !important;
+		padding: 10px !important;
+		background: #F0F0F0 !important;
+		border-color: #d1d1d1 !important;
+		margin-bottom: 0px !important;
+	}
+	
+	div#map {
+		max-width: 460px;
+		width: auto !important;
+	}
+	
+	div.box_rechts, div.box_links, div.hinweis_wichtig, div.hinweisrechts, div.hinweis_rechts, div.hinweis, div.baustelle, div.klein_box_rechts, div.klein_box_links, div.klein_box, div.vollbox {
+		float: none;
+		margin: 20px;
+		width: auto !important;
+	}
+	
+	pre {
+		width: auto;
+	}
+	
+	div#inhaltsuebersicht ul {
+		margin-left: 0;
+	}
+	
+	div#inhaltsuebersicht ul ul {
+		margin-left: 1em;
+	}
+	
+	
+	div#suche {
+		bottom: 155px !important;
+		right: 5px !important;
+		left: auto !important;
+		background-color: transparent !important;
+	}
+	
+	.infotext, .infologo {
+		display: none !important;
+	}
+	
+	div.feedrahmen .feedeintrag {
+		float: none !important;
+		width: 100% !important;
+		clear: both;
+	}
+	div.feedrahmen .feedeintrag p, div.feedrahmen .feedeintrag h3 {
+		margin-left: 0 !important;
+	}
+	.prettyGalleryContainer, .gallery {
+		display: none;
+	}
+	
+	div#footer div#footerinfos div#zusatzinfo h2,
+	div#footer div#footerinfos div#zusatzinfo h3,
+	div#footer div#footerinfos div#zusatzinfo h4,
+	div#footer div#footerinfos div#zusatzinfo h5 {
+		margin-top: 0.2em;
+		margin-bottom: 0.5em;
+		font-weight: bold;
+		color: #444;
+	}
+		
+	div#footer div#footerinfos div#zusatzinfo p {
+		padding: 0;
+		margin: 0 0 0.5em 0;
+		color: #333;
+	}
+	
+	
+	div#footer div#footerinfos div#zusatzinfo p a {
+		color: #333;	
+	}
+	
+	div#flaggen img, div.flaggen img, div#languagebar img {
+		height: 15px !important;
+	}
+	
+	div#footerinfos {
+		position: relative;
+	}
+	
+	div#footer div#footerinfos div#flaggen, div#footer div#footerinfos div.flaggen, div#footer div#footerinfos div#languagebar {
+		top: 45px;
+	}
+
+	
+}

@@ -1,0 +1,25 @@
+/**
+ * Projekt Vorlagenkatalog 
+ *
+ * Basisstylesheet HTML5
+ *
+ * @mod_name        header_bg
+ * @mod_desc        Hintergrund-Bannergrafik im Header
+ *
+ * @copyright       Copyright 2005-2011, RRZE
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/)
+ * @link            http://www.vorlagen.uni-erlangen.de
+ * @package         css
+ * @version         1.0
+ * @lastmodified    02/2012
+ */
+
+@media screen, projection
+{
+
+header {
+	/*background: #f9f9f9  url(/grafiken/html5/bg_header_1.jpg) no-repeat top center;*/ /* blau */
+	/*background: #f9f9f9  url(/grafiken/html5/bg_header_2.jpg) no-repeat top center;*/ /* blau */
+	background: #f9f9f9  url(img/bg_header_2_sw.jpg) no-repeat top center; /* Schwarz-Weiß, passend für alle Layout-Farben */
+
+}

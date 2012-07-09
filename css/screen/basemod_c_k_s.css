@@ -1,0 +1,63 @@
+/**
+ * Projekt Vorlagenkatalog 
+ *
+ * Basisstylesheet HTML5
+ *
+ * @mod_name        c_k_s
+ * @mod_desc        Seitenaufbau: Content | Kurzinfo | Sidebar  (nicht kombinerbar mit basemod_kurzinfo bzw. basemod_sidebar)
+ *
+ * @copyright       Copyright 2005-2011, RRZE
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/)
+ * @link            http://www.vorlagen.uni-erlangen.de
+ * @package         css
+ * @version         1.0
+ * @lastmodified    02/2012
+ */
+
+@media screen, projection
+{
+	
+	div#content {
+		margin-right: 460px;
+		min-height: 200px; /*notfalls manuell anpassen, wenn div#kurzinfo zu groß ist*/
+	}
+
+	div#kopf div#titel {
+		left: 20px;
+	}
+	
+	div#main div#menu div#kurzinfo {
+		position: absolute; /*Inhaltsbereich skaliert nicht automatisch mit, Überlappung möglich, falls höher als Inhalt!*/
+		top: 80px;
+		right: 260px;
+		width: 200px;
+		display: block;
+	}
+	
+	
+	div#main>aside {
+		width: 230px;
+		display: block;
+		float: right;
+		margin-right: 0px;
+	}
+	
+	div#main div#sidebar {
+		display: block;
+		padding: 1em;
+		background-color: #EEE;
+		border: 1px solid #CCC;
+		margin-top: -50px;
+		box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+	}
+	
+	div#main:after {
+		clear:both;
+		content:".";
+		display:block;
+		font-size:0;
+		height:0;
+		visibility:hidden;
+  	}
+	
+}

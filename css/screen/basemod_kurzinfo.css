@@ -1,0 +1,37 @@
+/**
+ * Projekt Vorlagenkatalog 
+ *
+ * Basisstylesheet HTML5
+ *
+ * @mod_name        kurzinfo
+ * @mod_desc        Kurzinfo-Spalte links neben Content
+ *
+ * @copyright       Copyright 2005-2011, RRZE
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/)
+ * @link            http://www.vorlagen.uni-erlangen.de
+ * @package         css
+ * @version         1.0
+ * @lastmodified    02/2012
+ */
+
+@media screen, projection
+{
+ 
+	div#content {
+		margin-left: 220px;
+		min-height: 200px; /*notfalls manuell anpassen, wenn div#kurzinfo zu groß ist*/
+	}
+
+	div#kopf div#titel {
+		left: 240px;
+	}
+	
+	div#main div#menu div#kurzinfo {
+		position: absolute; /*Inhaltsbereich skaliert nicht automatisch mit, Überlappung möglich, falls höher als Inhalt!*/
+		top: 80px;
+		left: 20px;
+		width: 200px;
+		display: block;
+	}
+	
+}

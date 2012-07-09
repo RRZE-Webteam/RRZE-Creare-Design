@@ -1,0 +1,939 @@
+/**
+ * Projekt Vorlagenkatalog 
+ *
+ * Basisstylesheet HTML5
+ *
+ * Allgemeine Grundvorgaben fuer Elemente & Farbinformationen
+ *
+ * @author			Thomas Kipf
+ * @copyright       Copyright 2005-2012, RRZE
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/)
+ * @link            http://www.vorlagen.uni-erlangen.de
+ * @package         css
+ * @version         0.1
+ * @lastmodified    02/2012
+ */
+
+@media screen, projection
+{
+
+	/*  ------------------------------------------------------
+	BASICS
+	--------------------------------------------------------*/
+	* {margin:0; padding:0;}
+	
+	body {
+		font: 100.1% "Verdana", Arial, sans-serif;
+		color: #000;
+		background: #252525;
+	} 
+	
+	img { border: 0 none;}
+	
+	/*  ------------------------------------------------------
+	lang / q
+	--------------------------------------------------------*/
+	:lang(de) > q	{ quotes: '"' '"' }
+	:lang(en) > q	{ quotes: '"' '"' }
+	
+	/* Folgendes sollte Default f�r q sein: */
+	q:before		{ content: open-quote }
+	q:after		{ content: close-quote }
+	
+	/*  ------------------------------------------------------
+	COMMON CLASSES
+	--------------------------------------------------------*/
+	.unsichtbar, .u, .u2, .com, .skip {
+		position:absolute;
+		left:-3000px;
+		top:-3000px;
+		width:1px;
+	} 
+	
+	.clear {
+		clear: both; 
+	}
+	
+	.links, .left {
+		text-align: left;
+	}
+	.rights, rechts {
+		text-align: right;
+	}
+	.center {
+		text-align: center;
+	}
+	.oben, .top {
+		vertical-align: top;
+	}
+	.unten, .bottom {
+		vertical-align: bottom;
+	}
+	.mitte, .middle {
+		vertical-align: middle;
+	}
+	
+	
+	/*  ------------------------------------------------------
+	LINKICONS
+	--------------------------------------------------------*/
+	a img {
+		margin: 0 2px 0 0;
+	}
+	
+	/*  ------------------------------------------------------
+	ACRONYM
+	--------------------------------------------------------*/
+	acronym {
+		cursor: help; 
+	}
+	
+	/*  ------------------------------------------------------
+	CODE
+	--------------------------------------------------------*/
+	code {
+		font-family: "Courier New", Courier, monospace;
+		font-size: 1em;
+		line-height: 150%;
+	}
+	code.codeblock {
+		font-family: "Courier New", Courier, monospace;
+		display: block;
+		width: 80%;
+		padding: 10px;
+		margin: 5px 0 5px 10px;
+	}
+	
+	li code, p code, td code, h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
+		font-size: 1.2em;
+	}
+	
+	/*  ------------------------------------------------------
+	PRE
+	--------------------------------------------------------*/
+	pre {
+		font-size: 0.8em;
+		width: 98%;
+		overflow: auto;
+		padding: 20px;
+		margin: 0 0 16px 0;		
+		border: 1px solid #C3D4DF;
+	}
+	
+	li pre, p pre, td pre, h1 pre, h2 pre, h3 pre, h4 pre, h5 pre, h6 pre {
+		font-size: 1.2em;
+	}
+	
+	pre {
+		font-family: "Courier New", Courier, monospace;
+		display: block;
+		padding: 10px 0;
+	}
+	
+	/*  ------------------------------------------------------
+	LINKS
+	--------------------------------------------------------*/
+	div#content a, 
+	div#content a:link {
+		text-decoration: underline;
+		color: #333;
+	}
+	
+	div#content a:visited {
+		color: #666;
+	}
+	
+	div#content a:hover, 
+	div#content a:focus, 
+	div#content a:active {
+		text-decoration: none;
+		border-bottom: #8EB6CF 1px solid;
+		background-color: #e1ecf3;
+		color: #2F2F2F;
+	}
+	
+	div#content a:focus, 
+	div#content a:active {
+		background: #879EB0;
+		color: #FDFDF6;
+		border-bottom: #006666 1px solid;
+	}
+
+
+	/*  ------------------------------------------------------
+	ADDRESS
+	--------------------------------------------------------*/
+	address {  
+		font-style: normal;
+		margin: 0 0 20px 0;
+	} 
+	
+	/*  ------------------------------------------------------
+	TEXTABSATZ
+	--------------------------------------------------------*/
+	div#content p {  
+		font-size: 0.76em;
+		line-height: 180%;
+		margin: 0 0 16px 0;
+	} 
+	div#sidebar p {
+		font-size: 0.76em;
+		line-height: 140%;
+		margin: 0 0 10px 0;
+		color: #555;
+	}
+	ul, ol, dl { margin:0; } /* LTR */
+	li {
+		line-height:1.25em;
+		margin-left:0; /* LTR */
+	}
+	div#content p, 
+	div#content label, 
+	div#content ul, 
+	div#content ol {  
+		color: #333;
+	} 
+		
+	div#content ul li {
+		line-height:180%;
+	}
+		
+	div#content ul li p {
+		font-size: 1em;
+	}
+	
+	/*  ------------------------------------------------------
+	HEADLINES
+	--------------------------------------------------------*/
+	h1, h2 {  
+		letter-spacing: 0.02em;
+	}
+	
+	#content h1, 
+	#content h2, 
+	#content h3 {  
+		margin-bottom:15px;
+	}
+	
+	h4, h5, h6 {  
+	}
+	
+	li h1, li h2, li h3, li h4, li h5, li h6 {
+		font-size: 1em;
+	}
+	/*  ------------------------------------------------------
+	h2
+	--------------------------------------------------------*/
+	div#content h2 {  
+		font-size: 1.3em;
+		/* margin: 0 120px 20px 0; */
+		font-weight: normal;
+		font-family: Georgia, "Times New Roman", Times, serif;
+		font-style: italic;
+		color: #666;
+		border-bottom: #DDD 1px solid;
+	} 
+	
+	div#content h2 a, 
+	div#content h2 a:link {
+		display: block;
+		text-decoration: none;
+		color: #666;
+	}
+	
+	div#content h2 a:hover, 
+	div#content h2 a:focus, 
+	div#content h2 a:active {
+		text-decoration: none;
+		border-bottom: 0 none;
+		background: #e1ecf3;
+		color: #333
+	}
+	
+	div#content h2 a:focus, 
+	div#content h2 a:active {
+		border-bottom: 0 none;
+		background: #879EB0;
+		color: #FDFDF6;
+	}
+	
+	div#content h2.tfnote { /* Hinweis */
+		background: #bfbfbf;
+		color: #0000AA;
+	}
+	
+	div#content h2.tfok { /* Aktion OK */
+		background: #bfbfbf;
+		color: #00AA00;
+	}
+	
+	div#content h2.tferror { /*Fehler bei Aktion*/
+		background: #bfbfbf;
+		color: #AA0000;
+	}
+	
+	div#content h2.tfadmin { /*Admin Aktion */
+	 	background: #bfbfbf;
+	 	color: #DD3300;
+	}
+	
+	/*  ------------------------------------------------------
+	h3
+	--------------------------------------------------------*/
+	div#content h3, div#sidebar h3 {
+		font-size: 1.1em;
+		margin: 0 120px 20px 0;
+		font-weight: normal;
+		font-family: Georgia, "Times New Roman", Times, serif;
+		font-style: italic;
+		color: #2D2D2D;
+	}
+	
+	div#content h3 a, 
+	div#content h3 a:link,
+	div#sidebar h3 a {
+		color: #2D2D2D;
+	}
+	
+	/*  ------------------------------------------------------
+	h4 + h5 + h6
+	--------------------------------------------------------*/
+	div#content h4, 
+	div#content h5, 
+	div#content h6 {
+		font-size: 0.84em;
+		margin: 0 120px 14px 0;
+		font-weight: bold;
+		color: #000;
+	}
+	
+	div#content h4 a, 
+	div#content h5 a, 
+	div#content h6 a, 
+	div#content h4 a:link, 
+	div#content h5 a:link, 
+	div#content h6 a:link {
+		color: #000;
+	}
+	
+	/*  ------------------------------------------------------
+	UNGEORDNETE LISTE
+	--------------------------------------------------------*/
+	ul {list-style-type: none;} 
+	
+	div#content ul {  
+		margin: 10px 20px 30px 20px;
+		font-size: 0.76em;
+		list-style-type: disc;
+	} 
+	
+	div#content ul ul {  
+		margin: 0 0 0 20px;
+		font-size: 1em;
+	} 
+	
+	/*  ------------------------------------------------------
+	GEORDNETE LISTE
+	--------------------------------------------------------*/
+	div#content ol {
+		margin: 10px 20px 30px 30px;
+		font-size: 0.76em;
+		list-style-type:upper-roman;
+	}
+	
+	div#content ol ol {
+		margin: 0 0 0 20px;
+		font-size: 1em;
+	}
+	
+	/*  ------------------------------------------------------
+	DEFINITIONSLISTEN
+	--------------------------------------------------------*/
+	div#content dl {
+		font-size: 0.76em;
+		margin: 0 0 16px 0;
+		color: #333;
+	}
+	
+	div#content dd {
+		margin: 0 0 8px 0;
+	}
+	
+	div#content dt {
+		font-weight: bold;
+	}
+	/*  ------------------------------------------------------
+	Bilder im Inhaltsbereich
+	--------------------------------------------------------*/
+	#content p img {
+	   display: inline;
+	   float: left; 
+	   margin: 8px;
+	}
+	#content p a img {
+	   display: inline;
+	   float: none; 
+	   margin: 0px;
+	}
+	div#content .bildlinks {
+	   display: inline;
+	   float: left;
+	   margin: 8px;
+	}
+	div#content .bildrechts {
+	   display: inline;
+	   float: right;
+	   margin: 8px;
+	}
+	/*  ------------------------------------------------------
+	TABELLEN
+	--------------------------------------------------------*/
+	#content table {
+		margin: 0 0 20px 0;
+		border-collapse: collapse;
+		width:84%;
+	}
+	#content table caption {
+		padding: 0 0 5px 0;
+		font-size: 0.7em;
+		font-style: italic;
+		text-align: right;
+		color: #2F2F2F;
+	}
+	
+	#content th {
+		font-size: 0.76em;
+		padding: 6px 6px 6px 12px;		
+		border-right: 1px solid #879EB0;
+		border-bottom: 1px solid #879EB0;
+		background: #fff;
+		color: #3F3F3F;
+	}
+	#content th.reihe {
+		text-align: left; 
+	}
+	#content th h2 {
+		margin: 1.5em 1em 1em 1em; 
+	}
+	#content th h3 {
+		margin: 1em 0.5em 0.5em 0.5em; 
+	}
+	#content td {
+		font-size: 0.76em;
+		text-align: left;
+		padding: 6px 6px 6px 12px;
+		color: #2F2F2F;
+		border-right: 1px solid #879EB0;
+		border-bottom: 1px solid #879EB0;
+		border-top: 1px solid #879EB0;
+		background: #e8eef2;
+	}
+	#content td.rechts,
+	#content td.right {
+		text-align: right;
+	}
+	#content table.voll {
+		margin: 0 0 20px 0;
+		border-collapse: collapse;
+		width:100%;
+	}
+	#content th.pro30 {
+		width:30%;
+	}
+	#content td.bgeei { background-color:#e0ad12;width:3px;}
+      #content td.bgmb { background-color:#8a9b00;width:3px;}
+	#content td.bgww { background-color:#ad2624;width:3px;}
+	#content td.bgcbi { background-color:#d97300;width:3px;}
+	#content td.bginf { background-color:#6399ab;width:3px;}
+	
+	#content tr.ungerade td { background-color:#E9EFF2; }
+	#content tr.gerade td { background-color:#F2F5F7; }
+
+	#content table.wechselfarbe tr td {
+		background-color:#F2F5F7;
+	}
+	#content table.wechselfarbe tr:nth-child(odd) td {
+		background-color:#E9EFF2; 
+	}
+
+	/*  ------------------------------------------------------
+	Definitionen fuer allgemeine Formulare
+	--------------------------------------------------------*/
+	input, textarea, select {
+		padding: 3px 4px;
+		font: 90% "Verdana", "Arial",  sans-serif;
+		background: #fff;
+		border: #666 1px solid;
+		color: #2F2F2F;
+	}
+	
+	textarea {
+		width: 80%;
+	}
+	
+	input.radio, 
+	input.checkbox {
+		border: 0 none;
+	}
+	
+	input:active, input:focus, 
+	textarea:active, textarea:focus, 
+	select:active, select:focus {
+		border: #999 1px solid;
+	}
+	
+	form input#submit1, 
+	form input#submit2 {
+		padding: 2px;
+	}
+	
+	form  p {
+	}
+	
+	form fieldset {
+		width: 80%;
+		display: block;
+		margin: 4px 0 30px 0;
+		padding: 5px;
+		background: #e8eef2;
+		border: #999 1px solid;
+	}
+	
+	form fieldset div.abstand {
+		padding: 10px 20px 10px 20px;
+	}
+	form fieldset legend {
+		margin: 0 0 0 24px;
+		color: #50718F !important;
+	}
+	
+	form fieldset p, 
+	form fieldset label, 
+	div.eingabe {
+		font-size:0.76em;
+		padding: 0 !important; 
+		margin: 0 0 8px 0 !important; 
+	}
+	 
+	
+	form fieldset p label {
+		padding: 0 !important; 
+		margin: 0 !important; 
+		font-size:1em;
+	}
+	
+	#formular .datenzeile, 
+	form .zeile {
+		display: block;
+		padding: 5px 0;
+		clear: both;
+	}
+	#formular .datenart,
+	form .datenart,
+	form .titel, 
+	form .frage {
+		display: block;
+		float: left;
+		width: 10em;
+		padding: 2px 5px 2px 0;
+		margin: 0;	
+	}
+	#formular .dateneingabe,
+	form .eingabe  {
+		display: block;
+		float: left;	
+		width: 55%;
+		margin: 0;	
+	}
+	
+	#formular .dateneingabe input,
+	form .eingabe input {	
+		font-weight: bold;
+		padding: 2px 5px;
+		background: #fff;
+		border: 1px solid #bbb;
+		color: #039;
+	}
+	
+	/*  ------------------------------------------------------
+	KLEINE BOX RECHTS
+	--------------------------------------------------------*/
+	div.klein_box_rechts {
+		float: right;
+		margin: 50px 0 20px 20px;
+		width: 200px; /*inline-styles per php !!*/
+		border: #999 1px solid;
+		background: #e8eef2;
+	}
+	
+	div.klein_box_rechts h4 {
+		padding: 4px 6px 0 6px;
+		margin: 0;
+	}
+	
+	div.klein_box_rechts p {
+		font-size: 0.7em !important;
+		margin: 0;
+		padding: 1px 6px 0 6px;
+		color: black;
+	}
+	
+	/*  ------------------------------------------------------
+	VOLLBOX
+	--------------------------------------------------------*/
+	div.vollbox {
+		margin: 10px 0 20px 0;
+		width: 300px; /*inline-styles*/
+		border: #999 1px solid;
+		background: #e8eef2;
+	}
+	
+	div.vollbox h4 {
+		padding: 4px 6px 0 6px;
+		margin: 0;
+	}
+	
+	div.vollbox p {
+		font-size: 0.7em !important;
+		margin: 0;
+		padding: 1px 6px 0 6px;
+		color: black;
+	}
+	
+	/*  ------------------------------------------------------
+	BOX (THUMBNAILS)
+	--------------------------------------------------------*/
+	div.box img {
+		float: left;
+		margin: 0 10px 20px 0;
+	}
+	
+	/*  ------------------------------------------------------
+	NACH OBEN - LINK
+	--------------------------------------------------------*/
+	div#content p.noprint {
+		text-align: right;
+	}
+	div#content p.noprint a,
+	div#content p.noprint a:link, 
+	div#content p.noprint a:visited {
+	
+	}
+	
+	/*  ------------------------------------------------------
+	INDEXLISTE-NACHOBEN
+	--------------------------------------------------------*/
+	div.indexliste-nachoben {
+		text-align: right;
+		padding: 3px 0;
+	}
+	
+	div.indexliste-nachoben a,
+	div.indexliste-nachoben a:link, 
+	div.indexliste-nachoben a:visited {
+	}
+	
+	/*  ------------------------------------------------------
+	INHALTSUEBERSICHT
+	--------------------------------------------------------*/
+	div#inhaltsuebersicht {
+	}
+	
+	div#inhaltsuebersicht ul {
+		line-height: 200%;
+	}
+	
+	div#inhaltsuebersicht ul li a {
+	
+	}
+	
+	div#inhaltsuebersicht ul li a dfn {
+		font-style: normal;
+		/*font-family: "Georgia", Garamond, Palatino, Times New Roman, Times serif;
+		font-weight: bold;*/
+	}
+	
+	div#inhaltsuebersicht ul h2 a {
+		font-size: 1.4em;
+	} 
+	
+	div#inhaltsuebersicht ul h3 a{
+		font-size: 1.3em;
+		font-weight: bold;
+	} 
+	
+	div#inhaltsuebersicht ul h4, 
+	div#inhaltsuebersicht ul h5 {
+		font-size: 1.1em;
+	} 
+	
+	div#inhaltsuebersicht ul ul {
+	
+	}
+	
+	div#inhaltsuebersicht ul ul ul {
+	}
+	
+	/*  ------------------------------------------------------
+	GLOSSAR
+	--------------------------------------------------------*/
+	div#glossar div.AlphaNavigation {
+	}
+	
+	div#glossar div.AlphaNavigation ul {
+		list-style-type: none;
+		margin: 0 0 20px 0;
+		padding:0;
+	}
+	
+	div#glossar div.AlphaNavigation ul li {
+		display: inline;
+		padding: 0 10px 0 0;
+		font-weight: bold;
+	}
+	
+	/*  ------------------------------------------------------
+	ALPHABET - LISTE
+	--------------------------------------------------------*/
+	div#inhaltsuebersicht  div.alphabet-liste {
+	}
+	
+	div.alphabet-index div.indexliste-nachoben  {
+		font-size: 0.76em;
+	}
+	
+	div#inhaltsuebersicht  div.alphabet-liste ul {
+		list-style-type: none;
+		margin: 0 0 20px 0;
+		padding:0;
+	}
+	
+	div#inhaltsuebersicht  div.alphabet-liste ul li {
+		display: inline;
+		padding: 0 10px 0 0;
+	}
+	
+	/*  ------------------------------------------------------
+	ALPHABET - INDEX
+	--------------------------------------------------------*/
+	div#inhaltsuebersicht  div.alphabet-index {
+	}
+	
+	div#inhaltsuebersicht  div.alphabet-index ul {
+	}
+	
+	/*                                                                     */
+	/* Typo-Variante sans-serif  - - - - - - - */
+	/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+	
+	/*  ------------------------------------------------------
+	HEADLINES
+	--------------------------------------------------------*/
+	h1, h2 {  
+		letter-spacing: 0.02em;
+	}
+	
+	h1, h2, h3 {  
+		font-family: "Trebuchet MS", Lucida Sans, Lucida Sans Unicode, Verdana, sans-serif;
+	}
+	
+	h4, h5, h6 {  
+		font-family: "Trebuchet MS", Lucida Sans, Lucida Sans Unicode, Verdana, sans-serif;
+	}
+	
+	/*  ------------------------------------------------------
+	Definitionen fuer allgemeine Formulare
+	--------------------------------------------------------*/
+	form fieldset legend {
+		font: 1.1em "Trebuchet MS", Lucida Sans, Lucida Sans Unicode, Verdana, sans-serif;
+		font-weight: bold;
+	}
+	
+	/*  ------------------------------------------------------
+	GLOSSAR
+	--------------------------------------------------------*/
+	div#glossar div.AlphaNavigation ul li {
+		font: 1.4em "Trebuchet MS", Lucida Sans, Lucida Sans Unicode, Verdana, sans-serif;
+		font-weight: bold;
+	}
+	
+	/*  ------------------------------------------------------
+	ALPHABET - LISTE
+	--------------------------------------------------------*/
+	div#inhaltsuebersicht  div.alphabet-liste ul li {
+		font: 1.4em "Trebuchet MS", Lucida Sans, Lucida Sans Unicode, Verdana, sans-serif;
+	}
+	   
+	/*  ------------------------------------------------------
+	FOOTER
+	--------------------------------------------------------*/
+	div#footer h2 {
+		font: 0.76em "Trebuchet MS", Lucida Sans, Lucida Sans Unicode, Verdana, sans-serif;
+		font-weight: bold;
+	}
+	   
+	/*  ------------------------------------------------------
+	KURZINFO
+	--------------------------------------------------------*/
+	div#kurzinfo h2 {
+		font-family: Helvetica, Arial, sans-serif;
+		text-transform: uppercase;
+		font-weight: bold !important;
+		color: #666 !important;
+		margin-bottom: 1.5em;
+		font-size: 0.76em !important;
+	}
+	
+	div#kurzinfo h3 {
+		font-family: Georgia, "Times New Roman", Times, serif;
+		font-weight: normal;
+		color: #333;
+	}
+	
+	
+	
+	/*  ------------------------------------------------------
+	Besondere Hinweisboxen
+	--------------------------------------------------------*/
+	#content div.hinweis_wichtig {
+	   float:left;
+	   position:relative; /*fuer IE < 6 */
+	   width: 220px;
+	   font-size:.8em;
+	   font-weight:600;   
+	   line-height:1.2em;
+	   padding: 2px 2px 2px 55px;   
+	   margin: 1em;
+	}
+	#content div.hinweis_wichtig {
+	   border: 1px solid red;	
+	   background-image: url(/img/important.png);
+	   background-repeat: no-repeat;
+	   background-position: left center; 	
+	}
+	#content div.hinweis_wichtig h3, 
+	#content div.hinweis_wichtig h4 {
+		font-weight: bold;
+		font-size: 1.2em;	
+	}
+	#content div.hinweis_wichtig p {
+		font-weight: normal;
+		font-size: 1em;	
+	}
+	#content div.hinweis {
+	   float:left;
+	   font-size:.9em;
+	   line-height:1em;
+	   padding:2px 2px 2px 55px;   
+	   margin: 1em;
+	   width: 300px;
+	}
+	#content div.hinweis h3, 
+	#content div.hinweis h4 {
+		font-weight: bold;
+		font-size: 1.1em;
+	}
+	#content div.hinweis {
+	   border: 1px solid #ccc;
+	   background-image: url(/img/ktip.png);
+	   background-repeat: no-repeat;
+	   background-position: left center; 	
+	}
+	#content div.hinweis p {
+		font-weight: normal;
+		font-size: 0.8em;
+	}
+	#content div.hinweisrechts {
+	   float: right;
+	   font-size: 0.9em;
+	   padding:2px 2px 2px 55px;
+	   margin: 1em;
+	   width: 40%;
+	}
+	#content div.hinweisrechts {
+	   border: 1px solid #ccc;
+	   background-image: url(/img/ktip.png);
+	   background-repeat: no-repeat;
+	   background-position: left center; 	
+	}
+	#content div.hinweisrechts h3, 
+	#content div.hinweisrechts h4 {
+		font-weight: bold;
+		font-size: 1.1em;	
+	}
+	#content div.hinweisrechts p {
+		font-weight: normal;
+		font-size: 0.8em;
+	}
+	#content div.baustelle {
+	   float:left;
+		position:relative; /*fuer IE < 6 */
+	   width: 220px;
+	   font-size:.8em;
+	   font-weight:600;   
+	   padding:2px 2px 2px 55px;
+	   margin: 1em;   
+	}
+	#content div.baustelle {
+	   border: 1px solid #ccc;	
+	   background-image: url(/img/package_settings.png);
+	   background-repeat: no-repeat;
+	   background-position: left center; 	
+	}
+	
+	#content div.baustelle h3, 
+	#content div.baustelle h4 {
+		font-weight: bold;
+		font-size: 1.2em;	
+	}
+	#content div.baustelle p {
+		font-weight: normal;
+		font-size: 1em;	
+	}
+	
+	label {
+		float:left;
+		width: 240px;
+	}
+
+	/*  ------------------------------------------------------
+	BildBox 
+	--------------------------------------------------------*/
+	div.bildbox {
+	/* width: 300px; /*inline-styles*/
+		background-color:#fff;
+		width: auto;
+		margin: 0 auto 5px;
+		text-align: center;
+		padding: 20px 20px 5px 20px;
+		font-style: italic;
+		font-size:1em;
+		padding: 5px;
+	}
+	div.bildbox_r{
+		text-align: center;
+		float:right;
+		margin: 0px 0px 5px 5px;
+		padding: 0px;
+		background-color:#fff;
+		font-style:italic;
+		font-size:1em;
+		padding: 5px;
+	}
+	div.bildbox_l{
+		text-align: center;
+		float:left;
+		margin: 0px 5px 5px 0px;
+		padding: 0px;
+		background-color:#fff;
+		font-style:italic;
+		font-size:1em;
+		padding: 5px;
+	}
+        
+        header.entry-header{
+            background: none;
+            border:none;
+        }
+
+}

@@ -1,0 +1,18 @@
+/*
+Theme Name: RRZE-Creare-Theme
+Author: The RRZE Webteam
+Author URI: http://blogs.fau.de/webworking
+Description: Basis Theme aus dem Webbaukasten für WordPress
+Tags: rrze, webbaukasten, vorlagen
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: _rrze
+*/
+
+/* import core styles | Basis-Stylesheets einbinden */
+@import url(css/base.css);
+
+/* import screen layout | Screen-Layout einbinden */
+@import url(css/layout.css);
+

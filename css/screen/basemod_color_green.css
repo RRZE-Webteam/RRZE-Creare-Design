@@ -1,0 +1,105 @@
+/**
+ * Projekt Vorlagenkatalog 
+ *
+ * Basisstylesheet HTML5
+ *
+ * @mod_name        color_red
+ * @mod_desc        Farbvariante rot
+ *
+ * @author			Thomas Kipf
+ * @copyright       Copyright 2005-2012, RRZE
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/)
+ * @link            http://www.vorlagen.uni-erlangen.de
+ * @package         css
+ * @version         1.0
+ * @lastmodified    05/2012
+ */
+
+
+@media screen, projection
+{
+	
+	div#kopf div#titel h1 {
+		color: #215b18;
+	}
+	
+	div#menu {
+		background: #215b18;
+		background: -webkit-gradient(linear, left top, left bottom, from(#2d7f21), to(#215b18));
+		background: -moz-linear-gradient(top, #2d7f21, #215b18);  
+		background: linear-gradient(top, #2d7f21, #215b18);  
+	}
+	
+	#kopf #navline {
+		background: #215b18;
+		background: -webkit-gradient(linear, left top, left bottom, from(#2d7f21), to(#215b18));
+		background: -moz-linear-gradient(top, #2d7f21, #215b18);  
+		background: linear-gradient(top, #2d7f21, #215b18);  		
+	}
+
+	ul#navigation li a,
+	ul#navigation li a:link,
+	ul#navigation li span.aktiv  {		
+		background: #215b18;
+		background: -webkit-gradient(linear, left top, left bottom, from(#2d7f21), to(#215b18));
+		background: -moz-linear-gradient(top, #2d7f21, #215b18);  
+		background: linear-gradient(top, #2d7f21, #215b18);  
+		border-right: 1px solid #27691c;
+	}
+	
+	ul#navigation li a:hover, 
+	ul#navigation li a:focus, 
+	ul#navigation li a:active {
+		background: #333333;
+		background: -webkit-gradient(linear, left top, left bottom, from(#215b18), to(#333333));
+		background: -moz-linear-gradient(top, #215b18, #333333);  
+		background: linear-gradient(top, #215b18, #333333);  
+	}
+	
+	ul#navigation ul#hauptnavigation>li:hover>a,
+	ul#navigation ul#hauptnavigation>li.hover>a,
+	ul#navigation ul#hauptnavigation>li:hover>span>a,
+	ul#navigation ul#hauptnavigation>li.hover>span>a {
+		background: #333333;
+		background: -webkit-gradient(linear, left top, left bottom, from(#215b18), to(#333333));
+		background: -moz-linear-gradient(top, #215b18, #333333);  
+		background: linear-gradient(top, #215b18, #333333);  
+	}
+	
+	form fieldset legend {
+		color: #555 !important;
+	}
+	
+	form fieldset {
+		background: #EEE;
+	}
+	
+	#content td {
+		border-right: 1px solid #333;
+		border-bottom: 1px solid #333;
+		border-top: 1px solid #333;
+		background: #DDD;
+	}
+	
+	#content th {
+		border-right: 1px solid #333;
+		border-bottom: 1px solid #333;
+	}
+	
+	#content table.wechselfarbe tr td {
+		background-color: #EEE;	
+	}
+	
+	#content table.wechselfarbe tr:nth-child(odd) td {
+		background-color: #DDD;
+	}
+	
+	pre {
+		border-color: #BBB;
+	}
+	
+	div.klein_box_rechts, div.vollbox {
+		background-color: #EEEED;	
+	}
+	
+}
