@@ -5,9 +5,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP-Basis-Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-05 14:25+0100\n"
+"POT-Creation-Date: 2012-07-10 15:24+0100\n"
 "PO-Revision-Date: \n"
-"Last-Translator: \n"
+"Last-Translator: Natalia <nrybka777@gmail.com>\n"
 "Language-Team: RRZE-Webteam\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,10 +20,8 @@ msgstr ""
 "X-Poedit-SearchPath-0: ..\n"
 
 #: ../404.php:4
-#: ../index.php:13
-#: ../page.php:13
-#: ../search.php:13
-#: ../single.php:13
+#: ../index.php:14
+#: ../search.php:14
 msgid "Main Content"
 msgstr "Inhalt"
 
@@ -70,64 +68,60 @@ msgstr "Neuere Kommentare &rarr;"
 msgid "Comments are closed."
 msgstr "Die Kommentarfunktion ist geschlossen."
 
-#: ../content-page.php:10
+#: ../content-page.php:9
 #: ../content-single.php:15
 #: ../content.php:19
 msgid "More <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Weiterlesen <span class=\"meta-nav\">&rarr;</span>"
 
-#: ../content-page.php:11
+#: ../content-page.php:10
 #: ../content-single.php:16
 #: ../content.php:20
 msgid "Pages:"
 msgstr "Seiten:"
 
-#: ../content-page.php:16
+#: ../content-page.php:15
 #: ../content-single.php:35
 msgid "Edit"
 msgstr "Bearbeiten"
 
 #: ../content-single.php:26
 #, php-format
-msgid "This entry was posted in %1$s and tagged %2$s by <a href=\"%6$s\">%5$s</a>. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
-msgstr "Dieser Eintrag wurde veröffentlicht in %1$s und verschlagwortet mit %2$s von <a href=\"%6$s\">%5$s</a>. <a href=\"%3$s\" title=\"Permalink zu %4$s\" rel=\"bookmark\">Permanenter Link zum Eintrag"
+msgid "This entry was posted in %1$s and tagged %2$s by <a href=\"%6$s\">%5$s</a>. <br/>Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Dieser Artikel wurde  in %1$s and mit den Schlagwörtern %2$s von <a href=\"%6$s\">%5$s</a> veröffentlicht. Den  <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">Permalink</a> als Lesezeichen speichern."
 
 #: ../content-single.php:28
 #, php-format
-msgid "This entry was posted in %1$s by <a href=\"%6$s\">%5$s</a>. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
-msgstr "Dieser Eintrag wurde veröffentlicht in %1$s von <a href=\"%6$s\">%5$s</a>. <a href=\"%3$s\" title=\"Permalink zu %4$s\" rel=\"bookmark\">Permanenter Link des Eintrags</a>."
+msgid "This entry was posted in %1$s by <a href=\"%6$s\">%5$s</a>. <br/>Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Dieser Artikel wurde  in %1$s von <a href=\"%6$s\">%5$s</a> veröffentlicht. Den <a href=\"%3$s\" title=\"Permalink zu %4$s\" rel=\"bookmark\">Parmalink</a> als Lesezeichen speichern."
 
 #: ../content-single.php:30
 #, php-format
-msgid "This entry was posted by <a href=\"%6$s\">%5$s</a>. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
-msgstr "Dieser Eintrag wurde von <a href=\"%6$s\">%5$s</a> veröffentlicht. Lesezeichen zum <a href=\"%3$s\" title=\"Permalink zu %4$s\" rel=\"bookmark\">Artikel setzen</a>."
+msgid "This entry was posted by <a href=\"%6$s\">%5$s</a>. <br/>Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Dieser Artikel wurde von <a href=\"%6$s\">%5$s</a> veröffentlicht. Den <a href=\"%3$s\" title=\"Permalink zu %4$s\" rel=\"bookmark\">Parmalink</a> als Lesezeichen speichern."
 
-#: ../footer.php:7
+#: ../footer.php:8
 msgid "General Information"
 msgstr "Allgemeine Information"
 
-#: ../footer.php:17
+#: ../footer.php:19
 msgid "Site Information"
 msgstr "Webseite Information"
 
-#: ../footer.php:19
-msgid "Additionl Information"
-msgstr "Zusatzinformationen"
-
-#: ../footer.php:20
+#: ../footer.php:21
 msgid "This area is intended for additional information."
 msgstr "Dieser Bereich ist f&uuml;r die Zusatzinformationen vorgesehen."
 
-#: ../footer.php:21
+#: ../footer.php:22
 msgid "Here could be helpful links and other information, which will be displayed on each page. This information will not be on the printer output with!"
 msgstr "Hier könnten hilfreiche Links oder sonstige Informationen stehen, welche auf jeder Seite eingeblendet werden sollen. Diese Angaben werden bei der Ausgabe auf dem Drucker nicht mit ausgegeben!"
 
-#: ../footer.php:22
+#: ../footer.php:23
 msgid "Back to Top"
 msgstr "Zum Seitenanfang"
 
 #: ../functions.php:21
-#: ../header.php:40
+#: ../header.php:73
 #: ../inc/template-tags.php:95
 msgid "Main Menu"
 msgstr "Bereichsmenü"
@@ -145,37 +139,37 @@ msgstr "Kurzinfo"
 msgid "Sidebar"
 msgstr "Sidebar"
 
-#: ../header.php:17
-msgid "Go to Main Content"
-msgstr "Zum Inhalt"
-
-#: ../header.php:18
-msgid "Go to Main Menu"
-msgstr "Zum Bereichsmenü"
-
-#: ../header.php:19
-msgid "Go to General Information"
-msgstr "Zu den allgemeinen Informationen"
-
-#: ../header.php:20
-msgid "Go to Site Information"
-msgstr "Zum Webseiteinformationen"
-
-#: ../header.php:52
+#: ../header.php:44
 msgid "You are here:"
 msgstr "Sie befinden sich hier:"
 
-#: ../search.php:17
+#: ../header.php:53
+msgid "Go to Main Content"
+msgstr "Zum Inhalt"
+
+#: ../header.php:54
+msgid "Go to Main Menu"
+msgstr "Zum Bereichsmenü"
+
+#: ../header.php:55
+msgid "Go to Site Information"
+msgstr "Zum Webseiteinformationen"
+
+#: ../header.php:56
+msgid "Go to General Information"
+msgstr "Zu den allgemeinen Informationen"
+
+#: ../search.php:18
 #: ../inc/template-tags.php:46
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Suchergebnisse für: %s"
 
-#: ../search.php:32
+#: ../search.php:33
 msgid "Nothing Found"
 msgstr "Es konnte nichts gefunden werden."
 
-#: ../search.php:36
+#: ../search.php:37
 msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
 msgstr "Entschuldigen Sie, aber es konnte nichts gefunden werden. Versuchen Sie es mit anderen Schlüsselwörtern erneut."
 
@@ -184,19 +178,19 @@ msgstr "Entschuldigen Sie, aber es konnte nichts gefunden werden. Versuchen Sie 
 msgid "Meta"
 msgstr "Meta"
 
-#: ../single.php:18
+#: ../single.php:36
 msgid "Post navigation"
 msgstr "Artikelnavigation"
 
-#: ../single.php:19
-#: ../inc/template-tags.php:67
-msgid "<span class=\"meta-nav\">&larr;</span> Previous"
-msgstr "<span class=\"meta-nav\">&larr;</span> Vorherige"
-
-#: ../single.php:20
+#: ../single.php:37
 #: ../inc/template-tags.php:68
 msgid "Next <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Nächste <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../single.php:38
+#: ../inc/template-tags.php:67
+msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+msgstr "<span class=\"meta-nav\">&larr;</span> Vorherige"
 
 #: ../inc/template-tags.php:24
 #: ../inc/template-tags.php:49
@@ -295,6 +289,9 @@ msgstr "Wählen Sie die Position für das Suchformular."
 #: ../inc/theme-options.php:165
 msgid "Options"
 msgstr "Einstellungen"
+
+#~ msgid "Additionl Information"
+#~ msgstr "Zusatzinformationen"
 
 #~ msgid "Settings"
 #~ msgstr "Einstellungen"
