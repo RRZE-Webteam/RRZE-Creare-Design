@@ -32,7 +32,7 @@
 
                 printf($utility_text, $categories_list, $tag_list, esc_url(get_permalink()), the_title_attribute('echo=0'), get_the_author(), esc_url(get_author_posts_url(get_the_author_meta('ID'))));
                 ?></p>
-                <p class="edit"><?php edit_post_link(__('Edit', '_rrze' ), '<span class="edit-link">', '</span>'); ?></p>
+               <?php edit_post_link(__('Edit', '_rrze' ), '<footer class="entry-meta"><div class="ym-wbox"><p class="edit">', '</p></div></footer>'); ?>
             </div>
         </footer>
 

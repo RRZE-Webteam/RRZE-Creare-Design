@@ -6,7 +6,7 @@
             </h2>
             <?php if ( 'post' == get_post_type() ) : ?>
             <div class="entry-meta">
-                <?php echo _rrze_posted_on(); ?>
+                <p><?php echo _rrze_posted_on(); ?></p>
             </div>
             <?php endif; ?>               
         </div>

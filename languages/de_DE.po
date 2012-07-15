@@ -43,7 +43,7 @@ msgstr "Versuchen Sie es mit einem Blick in die Monatsarchive."
 
 #: ../comments.php:3
 msgid "This post is password protected. Enter the password to view any comments."
-msgstr "Dieser Beitrag ist passwortgeschützt. Um Kommentare anschauen zu können müssen Sie das Passwort angeben."
+msgstr "Dieser Beitrag ist passwortgeschützt. Um Kommentare anschauen zu können müssen Sie das Passwort eingeben."
 
 #: ../comments.php:12
 #, php-format
@@ -53,6 +53,7 @@ msgstr[0] "Ein Kommentar zu &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$s Kommentare zu &ldquo;%2$s&rdquo;"
 
 #: ../comments.php:22
+#, fuzzy
 msgid "Comments navigation"
 msgstr "Kommentare-Navigation"
 
@@ -66,7 +67,7 @@ msgstr "Neuere Kommentare &rarr;"
 
 #: ../comments.php:30
 msgid "Comments are closed."
-msgstr "Die Kommentarfunktion ist geschlossen."
+msgstr "Kommentare sind geschlossen."
 
 #: ../content-page.php:9
 #: ../content-single.php:15
@@ -106,7 +107,7 @@ msgstr "Allgemeine Information"
 
 #: ../footer.php:19
 msgid "Site Information"
-msgstr "Webseite Information"
+msgstr "Information zur Webseite"
 
 #: ../footer.php:21
 msgid "This area is intended for additional information."
@@ -279,8 +280,9 @@ msgid "Top"
 msgstr "Oben"
 
 #: ../inc/theme-options.php:153
+#, fuzzy
 msgid "Choose what columnset do you want."
-msgstr "Wählen Sie, welche Columnset aktivieren möchten."
+msgstr "Wählen Sie, welche Columnset Sie aktivieren möchten."
 
 #: ../inc/theme-options.php:157
 msgid "Choose the position for the search form."

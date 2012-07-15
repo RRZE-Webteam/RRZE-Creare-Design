@@ -937,12 +937,21 @@
 	--------------------------------------------------------*/
         
         
-        header.entry-header{
+        header.entry-header,
+        header.page-header{
             background: none;
             border:none;
         }
 
-        
+        div#content header.page-header h2.page-title{
+            margin-bottom: 1em;
+            color:#666;
+            font-style: normal;
+        }
+        div#content header.page-header h2.page-title span{
+            font-weight: bold;
+            font-style: italic;
+        }
 
         nav#nav-pages .nav-previous,
         nav#nav-single .nav-previous,
@@ -979,6 +988,9 @@
           font-size:0.9em;
           font-weight: bolder;
         }
+        
+        
+        
         
         #nav ul li, .menu ul ul li {
             

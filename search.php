@@ -1,21 +1,37 @@
 <?php get_header(); ?>
+<div id="kurzinfo" >
+    <h2 class="skip">Kurzinfo</h2> 
+    <?php get_sidebar('kurzinfo'); ?>
 
-    <?php $option = Basistheme::get_columnset_option();?>
-    <div class="ym-column linearize-level-1">
-        <?php if($option['value'] == '1-2-3' || $option['value'] == '1-2'):?>
-        <div id="kurzinfo" class="ym-col1">
-            <div class="ym-cbox">
-                <?php get_sidebar('kurzinfo');?>
-            </div>           
-        </div>
-        <?php endif;?>
-        <div class="ym-col2">
-            <div class="ym-cbox">
-                <h2 class="ym-skip"><a name="contentmark" id="contentmark"><?php _e('Main Content', Basistheme::domain()); ?></a></h2>
-                <?php if (have_posts()) : ?>
+    <div class="infologo">
+        <p>
+            <a title="Zum Portal der Friedrich-Alexander-Universit&auml;t" href="http://www.uni-erlangen.de"><img src="http://www.vorlagen.fau.de/img/logos/fau/fau-logo-weissbg-180px.gif" width="180" height="50" alt="Friedrich-Alexander - Universit&auml;t Erlangen-N&uuml;rnberg" /></a>
+        </p>
+    </div>
+
+
+
+</div>		
+</div>  <!-- end: menu -->	 
+
+
+<aside><div id="sidebar" class="noprint">  <!-- begin: sidebar -->    
+
+        <h3 class="skip">Sidebar</h3>
+
+        <?php get_sidebar(); ?>
+
+    </div></aside>  <!-- end: sidebar -->   
+
+
+<!-- CONTENT ****************************************************************** -->
+<!-- ************************************************************************** -->
+<div id="content">  <!-- begin: content -->
+    <a name="contentmarke" id="contentmarke"></a>                  		
+    <?php if (have_posts()) : ?>
 
 				<header class="page-header">
-					<h2 class="page-title"><?php printf(__('Search Results for: %s', Basistheme::domain()), '<span>' . get_search_query() . '</span>' ); ?></h2>
+					<h2 class="page-title"><?php printf(__('Search Results for: %s', '_rrze' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
 				</header>
                 
                 <?php while (have_posts()) : the_post(); ?>
@@ -24,32 +40,25 @@
 
                 <?php endwhile; ?>
 
-                <?php Basistheme::nav_pages(); ?>
+                <?php echo _rrze_pages_nav(); ?>
                 
                 <?php else : ?>
 
 				<article id="post-0" class="post no-results not-found">
 					<header class="entry-header">
-						<h1 class="entry-title"><?php _e('Nothing Found', Basistheme::domain()); ?></h1>
+						<h1 class="entry-title"><?php _e('Nothing Found', '_rrze' ); ?></h1>
 					</header>
 
 					<div class="entry-content">
-						<p><?php _e('Sorry, but nothing matched your search criteria. Please try again with some different keywords.', Basistheme::domain()); ?></p>
+						<p><?php _e('Sorry, but nothing matched your search criteria. Please try again with some different keywords.', '_rrze' ); ?></p>
 						<?php get_search_form(); ?>
 					</div>
 				</article>
 
                 <?php endif; ?>
 
-            </div>
-        </div>
-        <?php if($option['value'] == '1-2-3' || $option['value'] == '2-3'):?>
-        <aside class="ym-col3">
-            <div class="ym-cbox">
-                <?php get_sidebar();?>
-            </div>
-        </aside>
-        <?php endif;?>
-    </div>
+    <hr id="vorfooter" />
+</div>  <!-- end: content -->                       
+</div>  <!-- end: main -->  
 
 <?php get_footer(); ?>

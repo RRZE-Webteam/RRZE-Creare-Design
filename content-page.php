@@ -10,11 +10,9 @@
             <?php wp_link_pages(array('before' => '<nav id="nav-pages"><div class="ym-wbox"><span>' . __('Pages:', '_rrze' ) . '</span>', 'after' => '</div></nav>')); ?>
         </div>
         
-        <footer class="entry-meta">
-            <div class="ym-wbox">
-                <?php edit_post_link(__('Edit', '_rrze' ), '<span class="edit-link">', '</span>'); ?>
-            </div>
-        </footer>
+
+<?php edit_post_link(__('Edit', '_rrze' ), '<footer class="entry-meta"><div class="ym-wbox"><p class="edit">', '</p></div></footer>'); ?>
+
         
     </article>
     
