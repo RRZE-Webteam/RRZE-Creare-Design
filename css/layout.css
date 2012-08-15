@@ -22,8 +22,9 @@
 @import url(screen/content.css);
 
 
-@import url(screen/basemod_kurzinfo.css);
-@import url(screen/basemod_sidebar.css);
+/*@import url(screen/basemod_kurzinfo.css);*/
+/*@import url(screen/basemod_kurzinfo_without_sidebar.css);*/
+/*@import url(screen/basemod_sidebar.css);*/
 @import url(screen/basemod_header_bg.css);
 /*@import url(screen/basemod_k_s_c.css);*/
 /*@import url(screen/basemod_c_k_s.css);*/

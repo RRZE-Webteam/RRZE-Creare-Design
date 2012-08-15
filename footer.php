@@ -16,11 +16,31 @@
                                 welche auf jeder Seite eingeblendet werden sollen.  					
                                 Diese Angaben werden bei der Ausgabe auf dem Drucker nicht mit ausgegeben!  			  			
                 --> 
-                <h3><?php _e('Site Information', '_rrze'); ?></h3>
+                
+                
+                
+                                        <div class="ym-column">
+                            <div class="ym-column linearize-level-1">
 
-                <p><?php _e('This area is intended for additional information.', '_rrze'); ?></p>
-                <p><?php _e('Here could be helpful links and other information, which will be displayed on each page. This information will not be on the printer output with!', '_rrze'); ?></p>
-                <p class="skip"><a href="#seitenmarke"><?php _e('Back to Top', '_rrze'); ?></a></p>
+                                <aside class="ym-col1">
+                                    <?php get_sidebar( 'footer-left' ); ?>
+                                </aside>
+
+                                <?php if( count( explode( '-', _rrze_theme_options( 'footer_layout' ) ) ) >= 2 ) : ?>
+                                <aside class="ym-col2">
+                                    <?php get_sidebar( 'footer-center' ); ?>
+                                </aside>
+                                
+                                <?php endif;?>
+                                
+                                <?php if( count( explode( '-', _rrze_theme_options( 'footer_layout' ) ) ) >= 3 ) : ?> 
+                                <aside class="ym-col3">
+                                    <?php get_sidebar( 'footer-right' ); ?>
+                                </aside>
+                                
+                                <?php endif; ?>
+                            </div>
+                        </div>                
             </div><!-- end: zusatzinfos -->
         </div> <!-- end: footerinfos -->	
     </div>   <!-- end: footer -->

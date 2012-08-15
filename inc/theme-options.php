@@ -1,37 +1,45 @@
 <?php
 
-function _rrze_theme_options_init() {
-    register_setting(
-        'general_options', '_rrze_theme_options', '_rrze_theme_options_validate'
-    );
-
-    add_settings_section(
-            'columnset_section', __('Columnset Options', '_rrze' ), '_rrze_section_columnset_callback', 'general_options'
-    );
-
-    add_settings_field(
-            'columnset', __('Columnset', '_rrze' ), '_rrze_field_columnset_callback', 'general_options', 'columnset_section'
-    );
-
-    add_settings_section(
-            'searchform_section', __('Search Form Options', '_rrze' ), '_rrze_section_searchform_callback', 'general_options'
-    );
-
-    add_settings_field(
-            'searchform', __('Search Form', '_rrze' ), '_rrze_field_searchform_callback', 'general_options', 'searchform_section'
-    );
-}
 add_action( 'admin_init', '_rrze_theme_options_init' );
+
+function _rrze_theme_options_init() {
+    
+    /* General options */
+    register_setting( 'general_options', '_rrze_theme_options', '_rrze_theme_options_validate' );
+
+    add_settings_section( 'searchform_section', __('Allgemeine Einstellungen', '_rrze' ), '_rrze_section_searchform_callback', 'general_options' );
+
+    add_settings_field( 'searchform', __('Suchformular', '_rrze' ), '_rrze_field_searchform_callback', 'general_options', 'searchform_section' );
+    
+    /* Header options */
+    register_setting( 'layout_options', '_rrze_theme_options', '_rrze_theme_options_validate' );
+
+    add_settings_section( 'layout_section', __('Layout-Einstellungen', '_rrze' ), '_rrze_section_layout_callback', 'layout_options' );
+
+    add_settings_field( 'columnlayout', __('Spalten-Layout', '_rrze' ), '_rrze_field_columnlayout_callback', 'layout_options', 'layout_section' );
+    
+    /* Footer options */
+    register_setting( 'footer_options', '_rrze_theme_options', '_rrze_theme_options_validate' );
+
+    add_settings_section( 'footer_layout_section', __('Footer-Einstellungen', '_rrze' ), '_rrze_section_footer_layout_callback', 'footer_options' );
+
+    add_settings_field( 'footer_layout', __('Spalten-Layout', '_rrze' ), '_rrze_field_footer_layout_callback', 'footer_options', 'footer_layout_section' );
+    
+    
+}
+
+add_filter( 'option_page_capability__rrze_options', '_rrze_option_page_capability' );
 
 function _rrze_option_page_capability( $capability ) {
 	return 'edit_theme_options';
 }
-add_filter( 'option_page_capability__rrze_options', '_rrze_option_page_capability' );
+
+add_action( 'admin_menu', '_rrze_theme_options_add_page' );
 
 function _rrze_theme_options_add_page() {
 	add_theme_page(
-		__( 'Theme Options', '_rrze' ),
-		__( 'Theme Options', '_rrze' ),
+		__( 'Einstellungen', '_rrze' ),
+		__( 'Einstellungen', '_rrze' ),
 		'edit_theme_options',
 		'theme_options',
 		'_rrze_theme_options_menu_page'
@@ -39,8 +47,8 @@ function _rrze_theme_options_add_page() {
     
     add_submenu_page(
         'theme_options', 
-        __( 'General', '_rrze' ), 
-        __( 'General', '_rrze' ), 
+        __( 'Allgemein', '_rrze' ), 
+        __( 'Allgemein', '_rrze' ), 
         'edit_theme_options', 
         'general_options', 
         '_rrze_theme_options_menu_page'
@@ -48,155 +56,216 @@ function _rrze_theme_options_add_page() {
 
     add_submenu_page(
         'theme_options', 
-        __( 'Options 2', '_rrze' ), 
-        __( 'Options 2', '_rrze' ), 
+        __( 'Layout', '_rrze' ), 
+        __( 'Layout', '_rrze' ), 
         'edit_theme_options', 
-        'theme_options_2', 
-        create_function(null, 'theme_menu_callback( "theme_options_2" );')
+        'layout_options', 
+        '_rrze_theme_options_menu_page'
     );
 
     add_submenu_page(
         'theme_options', 
-        __( 'Options 3', '_rrze' ), 
-        __( 'Options 3', '_rrze' ), 
+        __( 'Footer', '_rrze' ), 
+        __( 'Footer', '_rrze' ), 
         'edit_theme_options', 
-        'theme_options_3', 
-        create_function(null, 'theme_menu_callback( "theme_options_3" );')
+        'footer_options', 
+        '_rrze_theme_options_menu_page'
     );
     
 }
-add_action( 'admin_menu', '_rrze_theme_options_add_page' );
 
-function _rrze_columnset_option() {
-    $radio_buttons = array(
+function _rrze_columnlayout_options() {
+    $options = array(
         '1-2-3' => array(
                    'value' => '1-2-3',
-                   'label' => __('3 Columns (1-2-3)', '_rrze' )
+                   'label' => __( '3 Spalten - linke und rechte Sidebar', '_rrze' )
         ),
-        '1-2' => array(
-                 'value' => '1-2',
-                 'label' => __('2 Columns (1-2)', '_rrze' )
+        '1-3' => array(
+                 'value' => '1-3',
+                 'label' => __( '2 Spalten - linke Sidebar', '_rrze' )
         ),
         '2-3' => array(
                  'value' => '2-3',
-                 'label' => __('2 Columns (2-3)', '_rrze' )
+                 'label' => __( '2 Spalten - rechte Sidebar', '_rrze' )
         )
     );
 
-    return apply_filters( '_rrze_columnset_option', $radio_buttons );
+    return apply_filters( '_rrze_columnlayout_options', $options );
 }
 
-function _rrze_searchform_option() {
-    $radio_buttons = array(
-        'bottom' => array(
-                    'value' => 'bottom',
-                    'label' => __( 'Bottom', '_rrze' )
-        ),            
+function _rrze_footer_layout_options() {
+    $options = array(
+        '100' => array( 'group' => 1, 'value' => '100', 'label' => '100%' ),
+        '25-75' => array( 'group' => 2, 'value' => '25-75', 'label' => '25% | 75%' ),
+        '33-66' => array( 'group' => 2, 'value' => '33-66', 'label' => '33% | 66%' ),
+        '38-62' => array( 'group' => 2, 'value' => '38-62', 'label' => '38% | 62%' ),
+        '40-60' => array( 'group' => 2, 'value' => '40-60', 'label' => '40% | 60%' ),
+        '50-50' => array( 'group' => 2, 'value' => '50-50', 'label' => '50% | 50%' ),
+        '60-40' => array( 'group' => 2, 'value' => '60-40', 'label' => '60% | 40%' ),
+        '62-38' => array( 'group' => 2, 'value' => '62-38', 'label' => '62% | 38%' ),
+        '66-33' => array( 'group' => 2, 'value' => '66-33', 'label' => '66% | 33%' ),
+        '75-25' => array( 'group' => 2, 'value' => '75-25', 'label' => '75% | 25%' ),
+        '25-25-50' => array( 'group' => 3, 'value' => '25-25-50', 'label' => '25% | 25% | 50%' ),
+        '25-50-25' => array( 'group' => 3, 'value' => '25-50-25', 'label' => '25% | 50% | 25%' ),
+        '50-25-25' => array( 'group' => 3, 'value' => '50-25-25', 'label' => '50% | 25% | 25%' ),
+        '33-33-33' => array( 'group' => 3, 'value' => '33-33-33', 'label' => '33% | 33% | 33%' )
+    );
+
+    return apply_filters( '_rrze_footer_layout_options', $options );
+}
+
+function _rrze_searchform_options() {
+    $options = array(
+        'none' => array(
+                    'value' => 'none',
+                    'label' => __( 'keiner', '_rrze' )
+        ),
         'top' => array(
                  'value' => 'top',
-                 'label' => __( 'Top', '_rrze' )
-        )
+                 'label' => __( 'oben', '_rrze' )
+        ),        
+        'bereichsmenu' => array(
+                    'value' => 'bereichsmenu',
+                    'label' => __( 'Bereichsmenü', '_rrze' )
+        )          
     );
 
-    return apply_filters( '_rrze_searchform_option', $radio_buttons );
+    return apply_filters( '_rrze_searchform_options', $options );
 }
 
-function _rrze_get_theme_options($key = '') {
-	$saved = (array) get_option( '_rrze_theme_options' );
+function _rrze_theme_options( $key = '' ) {
 	$defaults = array(
-		'columnset'  => '1-2-3',
-		'searchform_position' => 'bottom',
+		'columnlayout'  => '1-2-3',
+        'footer_layout'  => '33-33-33',
+		'searchform_position' => 'bereichsmenu',
 	);
 
 	$defaults = apply_filters( '_rrze_default_theme_options', $defaults );
 
-	$options = wp_parse_args( $saved, $defaults );
-	$options = array_intersect_key( $options, $defaults );
+	$options = (array) get_option( _RRZE_OPTION_NAME );    
+	$options = wp_parse_args( $options, $defaults );
 
-    if( $key )
-        return $options[$key];
+    if( !empty( $key ) )
+        return isset($options[$key]) ? $options[$key] : NULL;
     
     return $options;
 }
 
-function _rrze_field_columnset_callback() {
-	$options = _rrze_get_theme_options();
+function _rrze_field_columnlayout_callback() {
+	$options = _rrze_theme_options();
 
-	foreach ( _rrze_columnset_option() as $button ):
+	foreach ( _rrze_columnlayout_options() as $button ):
 	?>
 	<div class="layout">
 		<label class="description">
-			<input type="radio" name="_rrze_theme_options[columnset]" value="<?php echo esc_attr( $button['value'] ); ?>" <?php checked( $options['columnset'], $button['value'] ); ?> />
+			<input type="radio" name="_rrze_theme_options[columnlayout]" value="<?php echo esc_attr( $button['value'] ); ?>" <?php checked( $options['columnlayout'], $button['value'] ); ?> />
 			<?php echo $button['label']; ?>
 		</label>
 	</div>
 	<?php
 	endforeach;
+}
+
+function _rrze_field_footer_layout_callback() {
+	$options = _rrze_theme_options();
+	?>
+	<select name="_rrze_theme_options[footer_layout]" id="footer-layout">
+		<?php
+			$selected = $options['footer_layout'];
+			$html = '';
+            
+            foreach( _rrze_footer_layout_options() as $option ) {
+                $groups[] = $option['group'];
+            }
+            
+            $groups = array_unique($groups);
+            foreach($groups as $group) {
+                $html .= '<optgroup label="'. esc_attr($group). ' ' .esc_attr( _n( 'Spalte', 'Spalten', $group, '_rrze' ) ) . '" rel="' . esc_attr($group) . '">';
+                foreach ( _rrze_footer_layout_options() as $option ) {
+                    if($option['group'] == $group) {
+                        $html .= '<option value="'.esc_attr($option['value']).'"'.($selected == $option['value'] ? ' selected="selected"' : '').'>'.esc_attr($option['label']).'</option>';
+                    }
+                }
+                $html .= '</optgroup>';
+            }
+            echo $html;
+		?>
+	</select>
+	<?php
+
 }
 
 function _rrze_field_searchform_callback() {
-	$options = _rrze_get_theme_options();
-
-	foreach ( _rrze_searchform_option() as $button ):
+	$options = _rrze_theme_options();
 	?>
-	<div class="layout">
-		<label class="description">
-			<input type="radio" name="_rrze_theme_options[searchform_position]" value="<?php echo esc_attr( $button['value'] ); ?>" <?php checked( $options['searchform_position'], $button['value'] ); ?> />
-			<?php echo $button['label']; ?>
-		</label>
-	</div>
+	<select name="_rrze_theme_options[searchform_position]" id="searchform-position">
+		<?php
+			$selected = $options['searchform_position'];
+			$html = '';
+
+			foreach ( _rrze_searchform_options() as $option ) {
+				$html .= '<option value="'.esc_attr($option['value']).'"'.($selected == $option['value'] ? ' selected="selected"' : '').'>'.esc_attr($option['label']).'</option>';
+			}
+			echo $html;
+		?>
+	</select>
 	<?php
-	endforeach;
 }
 
-function _rrze_section_columnset_callback() {
-    printf( '<p>%s</p>', __( 'Choose what columnset do you want.', '_rrze' ) );
+function _rrze_section_layout_callback() {
+    printf( '<p>%s</p>', __( 'Wählen Sie, welche Optionen aktivieren möchten.', '_rrze' ) );
+}
+
+function _rrze_section_footer_layout_callback() {
+    printf( '<p>%s</p>', __( 'Wählen Sie, welche Optionen aktivieren möchten.', '_rrze' ) );
 }
 
 function _rrze_section_searchform_callback() {
-    printf('<p>%s</p>', __('Choose the position for the search form.', '_rrze' ));
+    printf('<p>%s</p>', __( 'Wählen Sie, welche Optionen aktivieren möchten.', '_rrze' ));
 }
 
 function _rrze_theme_options_menu_page($tab = '') {
     ?>
     <div class="wrap">
 
-        <div id="icon-themes" class="icon32"></div>
-        <h2><?php _e('Options', '_rrze' ); ?></h2>
+        <?php screen_icon(); ?>
+        <h2><?php _e( 'Einstellungen', '_rrze' );?></h2>
         <?php settings_errors(); ?>
 
         <?php
-        if (isset($_GET['tab'])) {
+        if (isset($_GET['tab']))
             $tab = $_GET['tab'];
-        } else if ($tab == 'theme_options_2') {
-            $tab = 'theme_options_2';
-        } else if ($tab == 'theme_options_3') {
-            $tab = 'theme_options_3';
+            
+        if ($tab == 'layout_options') {
+            $tab = 'layout_options';
+            
+        } else if ($tab == 'footer_options') {
+            $tab = 'footer_options';
+            
         } else {
             $tab = 'general_options';
         }
         ?>
 
         <h2 class="nav-tab-wrapper">
-            <a href="?page=theme_options&tab=general_options" class="nav-tab <?php echo $tab == 'general_options' ? 'nav-tab-active' : ''; ?>"><?php _e('General', '_rrze' ); ?></a>
-            <a href="?page=theme_options&tab=theme_options_2" class="nav-tab <?php echo $tab == 'theme_options_2' ? 'nav-tab-active' : ''; ?>"><?php _e('Options 2', '_rrze' ); ?></a>
-            <a href="?page=theme_options&tab=theme_options_3" class="nav-tab <?php echo $tab == 'theme_options_3' ? 'nav-tab-active' : ''; ?>"><?php _e('Options 3', '_rrze' ); ?></a>
+            <a href="?page=theme_options&tab=general_options" class="nav-tab <?php echo $tab == 'general_options' ? 'nav-tab-active' : ''; ?>"><?php _e('Allgemein', '_rrze' ); ?></a>
+            <a href="?page=theme_options&tab=layout_options" class="nav-tab <?php echo $tab == 'layout_options' ? 'nav-tab-active' : ''; ?>"><?php _e('Layout', '_rrze' ); ?></a>
+            <a href="?page=theme_options&tab=footer_options" class="nav-tab <?php echo $tab == 'footer_options' ? 'nav-tab-active' : ''; ?>"><?php _e('Footer', '_rrze' ); ?></a>
         </h2>
 
         <form method="post" action="options.php">
             <?php
             if ($tab == 'general_options') {
-
                 settings_fields('general_options');
                 do_settings_sections('general_options');
-            } elseif ($tab == 'theme_options_2') {
-
-                //settings_fields('theme_options_2');
-                //do_settings_sections('theme_options_2');
+                
+            } elseif ($tab == 'layout_options') {
+                settings_fields('layout_options');
+                do_settings_sections('layout_options');
+                
             } else {
-
-                //settings_fields('theme_options_3');
-                //do_settings_sections('theme_options_3');
+                settings_fields('footer_options');
+                do_settings_sections('footer_options');
             }
 
             submit_button();
@@ -208,13 +277,53 @@ function _rrze_theme_options_menu_page($tab = '') {
 }
 
 function _rrze_theme_options_validate( $input ) {
-	$output = array();
+    $options = _rrze_theme_options();
 
-	if ( isset( $input['columnset'] ) && array_key_exists( $input['columnset'], _rrze_columnset_option() ) )
-		$output['columnset'] = $input['columnset'];
+	if ( isset( $input['columnlayout'] ) && array_key_exists( $input['columnlayout'], _rrze_columnlayout_options() ) )
+		$options['columnlayout'] = $input['columnlayout'];
 
-	if ( isset( $input['searchform_position'] ) && array_key_exists( $input['searchform_position'], _rrze_searchform_option() ) )
-		$output['searchform_position'] = $input['searchform_position'];
+	if ( isset( $input['footer_layout'] ) && array_key_exists( $input['footer_layout'], _rrze_footer_layout_options() ) )
+		$options['footer_layout'] = $input['footer_layout'];
     
-	return apply_filters( '_rrze_theme_options_validate', $output, $input );
+	if ( isset( $input['searchform_position'] ) && array_key_exists( $input['searchform_position'], _rrze_searchform_options() ) )
+		$options['searchform_position'] = $input['searchform_position'];
+    
+	return apply_filters( '_rrze_theme_options_validate', $options, $input );
 }
+
+function _rrze_theme_customizer( $wp_customize ) {
+    $options = _rrze_theme_options();
+    
+	$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
+	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
+    
+	$wp_customize->add_section( '_rrze_theme_layout', array(
+		'title'    => __( 'Layout', '_rrze' ),
+		'priority' => 50,
+	) );
+
+	$wp_customize->add_setting( '_rrze_theme_options[columnlayout]', array(
+		'type'              => 'option',
+		'default'           => $options['columnlayout'],
+		'sanitize_callback' => 'sanitize_key',
+	) );
+
+	$choices = array();
+	foreach ( _rrze_columnlayout_options() as $option ) {
+		$choices[$option['value']] = $option['label'];
+	}
+
+	$wp_customize->add_control( '_rrze_theme_options[columnlayout]', array(
+        'label'      => __( 'Spalten-Layout', '_rrze' ),        
+		'section'    => '_rrze_theme_layout',
+		'type'       => 'radio',
+		'choices'    => $choices,
+	) );
+
+}
+add_action( 'customize_register', '_rrze_theme_customizer' );
+
+function _rrze_theme_customizer_js() {
+    wp_enqueue_script( 'theme-customizer', sprintf('%s/js/theme-customizer.js', get_template_directory_uri() ), array( 'customize-preview' ), false, true );
+}
+add_action( 'customize_preview_init', '_rrze_theme_customizer_js' );

@@ -1,0 +1,5 @@
+    
+@media all {
+    footer aside.ym-col1 { width: 33.333%; margin: 0;} /* left column */
+    footer aside.ym-col2 { width: 66.666%; float:left; margin: 0; } /* right column */
+}

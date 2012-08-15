@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div id="kurzinfo" >
     <h2 class="skip">Kurzinfo</h2> 
-    <?php get_sidebar('kurzinfo'); ?>
+    <?php get_sidebar('links'); ?>
 
     <div class="infologo">
         <p>
@@ -19,7 +19,7 @@
 
         <h3 class="skip">Sidebar</h3>
 
-        <?php get_sidebar(); ?>
+         <?php get_sidebar('rechts'); ?>
 
     </div></aside>  <!-- end: sidebar -->   
 
@@ -30,9 +30,7 @@
     <a name="contentmarke" id="contentmarke"></a>                  		
     <?php if (have_posts()) : ?>
 
-				<header class="page-header">
-					<h2 class="page-title"><?php printf(__('Search Results for: %s', '_rrze' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
-				</header>
+				
                 
                 <?php while (have_posts()) : the_post(); ?>
 

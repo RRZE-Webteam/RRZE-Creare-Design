@@ -383,12 +383,15 @@
         background-color: #fff;
         padding: 20px;		
         padding-top: 100px;
+
         position: relative;
         box-shadow: 0px 3px 4px rgba(0,0,0,0.2);
         border-bottom: 30px solid #E3E3E3;
         margin-bottom: 80px;
-        min-height: 330px;
-        max-height: auto;
+        /*  min-height: 330px;
+        max-height: auto;-*/
+        height:100%;
+        padding-bottom:4em;
     }
 
     div#main:after {
@@ -411,7 +414,15 @@
         left: 0px;
     }
 
-
+   /* Suchmaske */
+    
+   #bereichsmenu form#searchform {
+       position:absolute;
+       top:0.35em;
+       right:1.2em;
+   } 
+    
+    
     /* Fuer eine erste Ebene */	
     ul#navigation {
         min-width: 960px;
@@ -744,20 +755,26 @@
         margin-top:1.5em;
     }
     div#main div#menu div#kurzinfo ul{
-        
+
     }
 
 
-    div#main div#menu div#kurzinfo h4{
+    div#main div#menu div#kurzinfo h4,
+    div#kurzinfo .widget-title a.rsswidget {
         color: #7A7A7A;
         font-size: 0.8em;
         font-weight: bold;
         letter-spacing: 2px;
         text-transform: uppercase;
         width: auto;
+        text-decoration: none;
     }
 
-    div#main div#menu div#kurzinfo h4:first-of-type{
+    div#kurzinfo .widget-title a.rsswidget {
+        font-size:1em;
+    }
+    
+    div#main div#menu div#kurzinfo h4:first-of-type {
         margin-top:0.8em;
     }
 
@@ -773,8 +790,13 @@
         color: #333;
         text-decoration: none;
         position: relative;
-        
+
     }
+
+
+
+
+
 
     div#main div#menu div#kurzinfo ul ul li a {
         padding-left: 40px;
@@ -824,10 +846,93 @@
     div#main div#menu div#kurzinfo  ul li:first-child {		
         border-top: 1px solid #CCC;
     }
-
-    div#main div#menu div#kurzinfo  ul li:last-child {		
-       
+    div#main div#menu div#kurzinfo  ul ul li:first-child,
+    div#main div#menu div#kurzinfo  ul ul ul li:first-child {		
+        border-top: none;
     }
+    div#main div#menu div#kurzinfo  ul li:last-child {		
+
+    }
+
+
+
+
+    div#main div#menu div#kurzinfo ul li.archive,
+    div#main div#menu div#kurzinfo ul li.archive a{
+        display: inline-block;
+        border:none;
+        background:inherit;
+        box-shadow: none;
+        padding: 4px 5px 4px 15px !important;
+    }
+    div#main div#menu div#kurzinfo ul li.archive{
+        font-size:0.9em;
+        width: 12em;
+        background-color: #FAFAFA;
+        border: 1px solid #CCC;
+        border-top: 0;
+        box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+        color: #333;
+        text-decoration: none;
+        position: relative;
+
+    }
+
+    div#main div#menu div#kurzinfo  ul li.archive:hover,
+    div#main div#menu div#kurzinfo  ul li.archive:focus,
+    div#main div#menu div#kurzinfo  ul li.archive:active {
+        background-color: #EEE;
+        color: #333;
+        text-decoration: none;
+    }
+
+    div#main div#menu div#kurzinfo  ul li.archive::before {
+        position: absolute;
+        top: 11px;
+        left: 10px;
+        z-index: 10;
+        content: "";
+        border: 4px solid #FAFAFA;
+        border-left: 4px solid #004F80;
+    }	
+    div#main div#menu div#kurzinfo  ul li.archive:hover::before,
+    div#main div#menu div#kurzinfo  ul li.archive:focus::before,
+    div#main div#menu div#kurzinfo  ul li.archive:active::before  {
+        position: absolute;
+        top: 11px;
+        left: 10px;
+        z-index: 10;
+        content: "";
+        border: 4px solid #EEE;
+        border-left: 4px solid #333;
+    }
+    div#main div#menu div#kurzinfo  ul li.archive a::before {
+        left: 0;
+        content: none;
+    }	
+
+    div#main div#menu div#kurzinfo  ul li.archive a:hover::before,
+    div#main div#menu div#kurzinfo  ul li.archive a:focus::before,
+    div#main div#menu div#kurzinfo  ul li.archive a:active::before {
+        content: none;
+    }	
+
+    div#main div#menu div#kurzinfo  ul ul li.archive a:hover::before,
+    div#main div#menu div#kurzinfo  ul ul li.archive a:focus::before,
+    div#main div#menu div#kurzinfo  ul ul li.archive a:active::before {
+        left: 25px;
+    }	
+
+
+    div#main div#menu div#kurzinfo  ul li.archive:first-child {		
+        border-top: 1px solid #CCC;
+    }
+
+    div#main div#menu div#kurzinfo  ul li.archive:last-child {		
+
+    }
+
+
 
     div#main div#menu div#kurzinfo div{
         margin-top:2em;
@@ -839,24 +944,24 @@
         margin-bottom: 1em;
         font-size:0.7em;
     }
-    
+
     div#main div#menu div#kurzinfo div.textwidget p {
         font-size:0.9em;
     }
-    
+
     #sidebar div.textwidget {
         color: #666666;
     }
 
     div#main div#menu div#kurzinfo div.infologo{
-        margin-bottom:2em;
+
     }
 
 
     /*  ------------------------------------------------------
     MAIN - MENU - CONTENT
-    --------------------------------------------------------*/
-    div#content { 
+    
+        div#content { 
     } 
 
     div#content div#ls {
@@ -868,6 +973,8 @@
         float: right;
         width: 48%;
     }
+    --------------------------------------------------------*/
+
 
     /*  ------------------------------------------------------
     MAIN - MENU - INHALTSINFO
@@ -1244,12 +1351,311 @@
 
 
 
+    /*  ------------------------------------------------------
+       FOOTER - FOOTERINFOS - ZUSATZINFO - WIDGETS
+       --------------------------------------------------------*/
+
+    #zusatzinfo h6.widget-title, #zusatzinfo .ym-vlist li {
+        background: none repeat scroll 0px 0px transparent;
+        color: rgb(170, 170, 170);
+        list-style-type: none;
+
+    }
+    #zusatzinfo .widget-title {
+        border-bottom: 4px solid rgb(136, 136, 136);
+        font-size:1.2em;
+        font-weight: bold;
+        margin: 0px 0px 3px;
+        padding: 3px 0px;
+        width: 100%;
+    }
+
+    #zusatzinfo h6{
+        line-height: 1.5em;
+    }
+
+    #zusatzinfo .ym-vlist {
+        list-style-type: none;
+    }
+
+    #zusatzinfo .ym-vlist li{
+        line-height: 1.5em;    
+    }
+
+
+    #zusatzinfo .ym-vlist li a:focus, 
+    #zusatzinfo .ym-vlist li a:hover, 
+    #zusatzinfo .ym-vlist li a:active {
+        background-color: rgb(51, 51, 51);
+        color: rgb(255, 255, 255);
+        outline: 0px none;
+    }
+
+
+    #zusatzinfo .ym-vlist li a, 
+    #zusatzinfo .ym-vlist li strong, 
+    #zusatzinfo .ym-vlist li span {
+        width: 100%;
+        padding-left: 0px;
+        color: rgb(170, 170, 170) !important;
+    }
+
+    #zusatzinfo .ym-vlist a, 
+    #zusatzinfo .ym-vlist strong, 
+    #zusatzinfo .ym-vlist span {
+        display: block;
+        padding: 3px 0px 3px 10%;
+        text-decoration: none;
+        border-bottom: 1px solid rgb(221, 221, 221);
+    }
+    #zusatzinfo .ym-vlist a {
+        border-color: rgb(51, 51, 51);
+
+        color: rgb(170, 170, 170);
+        text-decoration: none !important;
+    }
+
+    #zusatzinfo .widget-wrapper {
+        margin-top: 1.5em;
+    }
+
+    #zusatzinfo .ym-vlist {
+        margin: 0px 0px 1.5em;
+        background: none repeat scroll 0% 0% transparent;
+        border: 0px none;
+        list-style-type: none;
+    }
+    #zusatzinfo table {
+        border-collapse: collapse;
+        color: rgb(170, 170, 170);
+        font-size: 100%;
+        border-spacing: 0px;
+        width: 100%;
+        border-color:#aaa;
+    }
+    table#wp-calendar{
+        margin-bottom: 0.7em;
+    }
+    #zusatzinfo table caption {
+        font-variant: small-caps;
+        text-align: right;
+        padding-bottom: 0;
+        color: rgb(170, 170, 170);
+        font-size:1em;
+
+    }
+    #zusatzinfo table#wp-calendar {
+        color: rgb(170, 170, 170);
+        border-collapse: collapse;
+        border-spacing: 0px;
+        -moz-box-shadow:none;
+        box-shadow: none;
+        border-bottom: 3px solid #333333;
+        border-top: 1px solid #333333;
+        color: #AAAAAA;
+        background:inherit !important;
+
+    }
+    #zusatzinfo #wp-calendar thead th { 
+        padding: 0.5em; 
+        color:#aaa;
+    }
+    #zusatzinfo #wp-calendar thead{
+        background:inherit;
+    }
+    #zusatzinfo table#wp-calendar th, 
+    #zusatzinfo table#wp-calendar td {
+        padding: 1em 0.5em;
+        background:inherit !important;
+
+    }
+    #zusatzinfo #wp-calendar tbody td {
+        border: none; 
+        color:#aaa;
+    }
+    #zusatzinfo table#wp-calendar thead tr th {
+        text-align: center !important;     
+        background:inherit !important;
+    }
+    #zusatzinfo table#wp-calendar tr {
+        border-bottom: 2px solid #333333;
+    }
+    #zusatzinfo #wp-calendar thead th:nth-child(6) {
+        color:red;
+    }
+    #zusatzinfo #wp-calendar thead th:nth-child(7) {
+        color:red;
+    }
+    #zusatzinfo th, 
+    #zusatzinfo td {
+        line-height: 1.5em;
+        vertical-align: top;
+    }
+
+    #zusatzinfo table#wp-calendar tfoot a:focus, 
+    #zusatzinfo table#wp-calendar tfoot a:hover, 
+    #zusatzinfo table#wp-calendar tfoot a:active {
+        background-color: rgb(51, 51, 51);
+        color: rgb(255, 255, 255);
+        -moz-box-shadow:none;
+        box-shadow: none;
+
+        vertical-align: top;
+    }
+
+    #zusatzinfo table#wp-calendar tfoot {
+        border-bottom:4px solid #aaa;    
+    }
+    #zusatzinfo #wp-calendar tbody tr:hover { 
+        background: #333; 
+    }
+
+
+
+    div.tagcloud {
+        background:transparent !important;
+        margin-bottom:1em;
+        width: 100%;
+        position:relative;
+        margin-top: 1em;
+
+    }
+
+    .tagcloud a {
+        text-decoration: none;
+        font-size:0.9em !important;
+    }
+    #zusatzinfo .tagcloud a {
+        text-decoration: none;
+        font-size:1.2em !important;
+    }
+    .tagcloud a:link {
+        background:none;
+        border:none;
+        background-color:#879EB0;
+        display:inline-block !important;
+        font-weight:bold;
+        text-decoration:none;
+        padding: 0.2em 0.5em !important;
+        color:#eef;
+
+
+        -webkit-text-shadow: rgba(0,0,0,0.2) 2px 0, rgba(0,0,0,0.2) 0 2px, rgba(255,255,255,0.2) -2px 0, rgba(255,255,255,0.2) 0 -2px, rgba(0,0,0,0.2) 2px 2px, rgba(255,255,255,0.2) -2px -2px; 
+        -moz-text-shadow: rgba(0,0,0,0.2) 2px 0, rgba(0,0,0,0.2) 0 2px, rgba(255,255,255,0.2) -2px 0, rgba(255,255,255,0.2) 0 -2px, rgba(0,0,0,0.2) 2px 2px, rgba(255,255,255,0.2) -2px -2px; 
+        -o-text-shadow: rgba(0,0,0,0.2) 2px 0, rgba(0,0,0,0.2) 0 2px, rgba(255,255,255,0.2) -2px 0, rgba(255,255,255,0.2) 0 -2px, rgba(0,0,0,0.2) 2px 2px, rgba(255,255,255,0.2) -2px -2px;
+        text-shadow: rgba(0,0,0,0.2) 2px 0, rgba(0,0,0,0.2) 0 2px, rgba(255,255,255,0.2) -2px 0, rgba(255,255,255,0.2) 0 -2px, rgba(0,0,0,0.2) 2px 2px, rgba(255,255,255,0.2) -2px -2px;
+
+        -webkit-box-shadow: 0 0 10px rgb(0,0,0);
+        -moz-box-shadow: 0 0 10px rgb(0,0,0);
+        -o-box-shadow: 0 0 10px rgb(0,0,0);
+        box-shadow: 0 0 10px rgb(0,0,0);
+
+        -webkit-transform: rotate(-2deg);
+        -moz-transform: rotate(-2deg);
+        -o-transform: rotate(-2deg);
+        transform: rotate(-2deg);
+
+        -webkit-transition: -webkit-transform 0.1s ease-in;
+        -moz-transition: -moz-transform 0.1s ease-in;
+        -o-transition: -o-transform 0.1s ease-in;
+        transition: transform 0.1s ease-in;	
+    }
 
 
 
 
 
+    div.widget_tag_cloud:after
+    {
+        content:".";
+        height:200px !important;
+        clear:both !important;
+        float:none !important;
+        visibility: hidden;
+    }
 
+    .tagcloud a:last-child:after{
+        clear:both;
+    }
+
+
+    .tagcloud a:hover {
+        color:#fff;
+        background-color:#005386;
+        z-index:10000;
+
+        -webkit-box-shadow: 0 0 8px rgb(0,0,100);
+        -moz-box-shadow: 0 0 8px rgb(0,0,100);
+        -o-box-shadow: 0 0 8px rgb(0,0,100);
+        box-shadow: 0 0 8px rgb(0,0,100);	 
+
+        -webkit-transform: rotate(3deg) scale(1.2);
+        -moz-transform: rotate(3deg) scale(1.2);
+        -o-transform: rotate(3deg) scale(1.2);
+        transform: rotate(3deg) scale(1.2);
+    }
+
+    .tagcloud a:nth-child(2n) {
+        background-color:#628BAF;
+        font-size:1.2em;
+
+        -webkit-transform: rotate(2deg);
+        -moz-transform: rotate(2deg);
+        -o-transform: rotate(2deg);
+        transform: rotate(2deg);
+    }
+
+    .tagcloud a:nth-child(4n) {
+        background-color:#879EB0;
+        font-size:1em !important;
+
+        -webkit-transform: rotate(-7deg);
+        -moz-transform: rotate(-7deg);
+        -o-transform: rotate(-7deg);
+        transform: rotate(-7deg);
+    }
+
+    .tagcloud a:nth-child(5n) {
+        background-color:#91B0C9;
+        font-size:1.3em;
+
+        -webkit-transform: rotate(-3deg);
+        -moz-transform: rotate(-3deg);
+        -o-transform: rotate(-3deg);
+        transform: rotate(-3deg);
+    }
+
+    .tagcloud a:nth-child(2n):hover {
+        -webkit-transform: rotate(-3deg) scale(1.2);
+        -moz-transform: rotate(-3deg) scale(1.2);
+        -o-transform: rotate(-3deg) scale(1.2);
+        transform: rotate(-3deg) scale(1.2);
+    }
+
+    .tagcloud a:nth-child(4n):hover {
+        -webkit-transform: rotate(3deg) scale(1.2);
+        -moz-transform: rotate(3deg) scale(1.2);
+        -o-transform: rotate(3deg) scale(1.2);
+        transform: rotate(3deg) scale(1.2);
+    }
+
+    .tagcloud a:nth-child(5n):hover {
+        -webkit-transform: rotate(2deg) scale(1.2);
+        -moz-transform: rotate(2deg) scale(1.2);
+        -o-transform: rotate(2deg) scale(1.2);
+        transform: rotate(2deg) scale(1.2);
+    }
+
+    .widget-title a.rsswidget {
+    display:inline !important;
+    padding-left:0px !important;
+    padding-top:0px !important;
+    }
+
+   #kurzinfo div.widget_nav_menu,
+   #kurzinfo div.widget_nav_menu{
+        margin-top:4em !important;
+    }
     /*  ------------------------------------------------------
     FeedImport
     --------------------------------------------------------*/

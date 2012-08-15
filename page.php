@@ -2,7 +2,7 @@
 
 <div id="kurzinfo" >
     <h2 class="skip">Kurzinfo</h2> 
-    <?php get_sidebar('kurzinfo'); ?>
+    <?php get_sidebar('links'); ?>
 
     <div class="infologo">
         <p>
@@ -20,7 +20,7 @@
 
         <h3 class="skip">Sidebar</h3>
 
-        <?php get_sidebar(); ?>
+        <?php get_sidebar('rechts'); ?>
 
     </div></aside>  <!-- end: sidebar -->   
 

@@ -3,6 +3,149 @@
  *
  * Basisstylesheet HTML5
  *
+ * @mod_name        kurzinfo
+ * @mod_desc        Kurzinfo-Spalte links neben Content
+ *
+ * @copyright       Copyright 2005-2011, RRZE
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/)
+ * @link            http://www.vorlagen.uni-erlangen.de
+ * @package         css
+ * @version         1.0
+ * @lastmodified    02/2012
+*/
+
+@media screen, projection
+{
+
+    div#content {
+       margin:0;
+       float:right;
+       width:48%;
+       padding-right:4em;
+       /* min-height: 200px; notfalls manuell anpassen, wenn div#kurzinfo zu groß ist*/
+
+    }
+
+
+    
+    div#kopf div#titel {
+        left: 240px;
+    }
+    div#main:after {
+        clear:both;
+        content:".";
+        display:block;
+        font-size:0;
+        height:0;
+        visibility:hidden;
+        
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+         visibility: hidden;
+    }
+    div#main div#menu div#kurzinfo {
+       /*         top: 80px;
+        left: 20px; 
+       position: absolute; Inhaltsbereich skaliert nicht automatisch mit, Überlappung möglich, falls höher als Inhalt!
+       margin-left:1.5%;
+       */
+       
+        width: 19%;
+        display: block;
+        float:right;
+        margin-right:79%;
+        
+
+    }
+
+    div#main div#menu div#kurzinfo div.menu-bereichsmenu-container{
+        margin-top:0;
+        margin-bottom:1em;
+    }
+
+    #calendar_wrap {
+    
+
+    }
+    #wp-calendar {
+        margin-top:0;
+        border-top: 1px solid #CCC;
+        box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+        padding: 1em;
+    }
+    #wp-calendar caption { 
+        text-align: right; 
+        color: #666; 
+        font-size: 0.8em; 
+        margin-top: 10px; 
+        margin-bottom: 15px; 
+    }
+    #wp-calendar thead { 
+        font-size: 0.8em; 
+        background: #FFF;
+    }
+    #wp-calendar thead th { 
+        padding: 0.5em; 
+        background: #FFF;
+        color:#004874;
+    }
+    
+    #wp-calendar thead th:nth-child(6) {
+        color:red;
+    }
+        #wp-calendar thead th:nth-child(7) {
+        color:red;
+    }
+    
+    #wp-calendar tbody { 
+        color: #aaa; 
+        padding: 3px 5px 3px 5px;
+    }
+    #wp-calendar tbody td { 
+        background: #EEEEEE; 
+        border: 1px solid #fff; 
+        text-align: center; 
+        padding:0.35em;
+        font-size: 0.9em;
+        color: #666;
+    }
+    #wp-calendar tbody td:hover { 
+        background: #fff; 
+    }
+    #wp-calendar tbody .pad { 
+        background: none; 
+    }
+    #wp-calendar tfoot #next { 
+        font-size: 0.7em; 
+        text-transform: uppercase; 
+        text-align: right;
+        padding:1em;
+        font-weight: bold;
+
+    }
+    #wp-calendar tfoot #prev { 
+        font-size: 0.7em; 
+        text-transform: uppercase; 
+        padding:1em; 
+        padding-right: 2em;
+        font-weight: bold;
+    }
+
+    #wp-calendar tfoot #prev a:link,
+    #wp-calendar tfoot #next a:link {
+        color:#004874;
+        font-weight: bold; 
+    }
+}
+
+
+/**
+ * Projekt Vorlagenkatalog 
+ *
+ * Basisstylesheet HTML5
+ *
  * @mod_name        sidebar
  * @mod_desc        Sidebar-Spalte rechts neben Content
  *
@@ -19,7 +162,6 @@
 
     div#content {
         min-height: 1100px;
-        margin-right:25%;
     }
 
     div#main aside {
@@ -207,77 +349,6 @@
         margin-bottom:0.5em;
         background: #DDD;
         box-shadow: inset -2px -2px 2px rgba(0,0,0,.2);
-    }
-    
-    
-    #wp-calendar {
-        margin-top:0;
-        border-top: 1px solid #CCC;
-        box-shadow: 0 2px 2px rgba(0,0,0,0.3);
-        padding: 1em;
-    }
-    #wp-calendar caption { 
-        text-align: right; 
-        color: #666; 
-        font-size: 0.8em; 
-        margin-top: 10px; 
-        margin-bottom: 15px; 
-    }
-    #wp-calendar thead { 
-        font-size: 0.8em; 
-        background: #FFF;
-    }
-    #wp-calendar thead th { 
-        padding: 0.5em; 
-        background: #FFF;
-        color:#004874;
-    }
-    
-    #wp-calendar thead th:nth-child(6) {
-        color:red;
-    }
-        #wp-calendar thead th:nth-child(7) {
-        color:red;
-    }
-    
-    #wp-calendar tbody { 
-        color: #aaa; 
-        padding: 3px 5px 3px 5px;
-    }
-    #wp-calendar tbody td { 
-        background: #EEEEEE; 
-        border: 1px solid #fff; 
-        text-align: center; 
-        padding:0.35em;
-        font-size: 0.9em;
-        color: #666;
-    }
-    #wp-calendar tbody td:hover { 
-        background: #fff; 
-    }
-    #wp-calendar tbody .pad { 
-        background: none; 
-    }
-    #wp-calendar tfoot #next { 
-        font-size: 0.7em; 
-        text-transform: uppercase; 
-        text-align: right;
-        padding:1em;
-        font-weight: bold;
-
-    }
-    #wp-calendar tfoot #prev { 
-        font-size: 0.7em; 
-        text-transform: uppercase; 
-        padding:1em; 
-        padding-right: 2em;
-        font-weight: bold;
-    }
-
-    #wp-calendar tfoot #prev a:link,
-    #wp-calendar tfoot #next a:link {
-        color:#004874;
-        font-weight: bold; 
     }
 
 }

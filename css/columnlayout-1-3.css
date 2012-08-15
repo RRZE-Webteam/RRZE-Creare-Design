@@ -18,16 +18,23 @@
 {
 
     div#content {
-       margin:0;
-       float:right;
-       width:48%;
-       padding-right:4em;
-       /* min-height: 200px; notfalls manuell anpassen, wenn div#kurzinfo zu groß ist*/
-
+        margin:0;
+        float:right;
+        width:70%;
+        padding-right:5em;
+        min-height:1200px;
+    }
+    div#main div#menu div#kurzinfo {
+        width: 19%;
+        display: block;
+        position:relative;
+        z-index: 200;
+        margin-top:5em;
+        margin-left:1em;
     }
 
 
-    
+
     div#kopf div#titel {
         left: 240px;
     }
@@ -38,27 +45,9 @@
         font-size:0;
         height:0;
         visibility:hidden;
-        
-        content: ".";
-        display: block;
-        height: 0;
-        clear: both;
-         visibility: hidden;
-    }
-    div#main div#menu div#kurzinfo {
-       /*         top: 80px;
-        left: 20px; 
-       position: absolute; Inhaltsbereich skaliert nicht automatisch mit, Überlappung möglich, falls höher als Inhalt!
-       margin-left:1.5%;
-       */
-       
-        width: 19%;
-        display: block;
-        float:right;
-        margin-right:79%;
-        
 
     }
+
 
     div#main div#menu div#kurzinfo div.menu-bereichsmenu-container{
         margin-top:0;
@@ -66,7 +55,7 @@
     }
 
     #calendar_wrap {
-    
+
 
     }
     #wp-calendar {
@@ -91,14 +80,14 @@
         background: #FFF;
         color:#004874;
     }
-    
+
     #wp-calendar thead th:nth-child(6) {
         color:red;
     }
-        #wp-calendar thead th:nth-child(7) {
+    #wp-calendar thead th:nth-child(7) {
         color:red;
     }
-    
+
     #wp-calendar tbody { 
         color: #aaa; 
         padding: 3px 5px 3px 5px;
@@ -138,4 +127,72 @@
         color:#004874;
         font-weight: bold; 
     }
+
+
+
+    #kurzinfo #searchform input{
+        background: #FFF;
+        border: 0 none;
+        font: bold 12px Arial,Helvetica,Sans-serif;
+        color: #333;
+        width:14em;
+        padding: 4px 15px 4px 15px;
+        box-shadow: inset 2px 2px 2px rgba(0,0,0,.2);
+    }
+    #kurzinfo #searchform input {
+        width:15.5em; 
+        border: 1px solid #CCC;
+        border-top: 0;
+        box-shadow: inset 1px 2px 2px rgba(0,0,0,0.2);
+    }
+
+    #kurzinfo #searchform input[type="text"] {
+        padding:5px 7px;
+    }
+
+    #kurzinfo #searchform input[type="text"]:focus{
+        background: #D4D7D9;
+        color:#333;
+        outline: none !important;
+    }
+
+
+    #kurzinfo #searchform input[type="submit"]:hover{
+        background: #FFF;
+        box-shadow: inset 2px 2px 2px rgba(0,0,0,.2);
+    }
+
+    #kurzinfo #searchform input[type="submit"]:active{
+        background: #DDD;
+    }
+
+
+    #kurzinfo #searchform label.screen-reader-text{
+        color: #7A7A7A; 
+        font-size:1.2em;
+        font-size: 0.8em;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        width: auto;
+        padding:0.5em 0 0.5em 0; 
+        font-family: "Trebuchet MS",Lucida Sans,Lucida Sans Unicode,Verdana,sans-serif;
+        margin-top:-1em;
+    }
+
+    #kurzinfo #searchform input[type="submit"]{
+        width:60px;
+        padding: 3px 5px 3px 5px;
+        margin-top:0.5em;
+        margin-bottom:0.5em;
+        background: #DDD;
+        box-shadow: inset -2px -2px 2px rgba(0,0,0,.2);
+    }
+    select[name="archive-dropdown"]{       
+        width:14em; 
+        border: 1px solid #CCC;
+        border-top: 0;
+        box-shadow: inset 1px 2px 2px rgba(0,0,0,0.2);
+    }
+
 }
