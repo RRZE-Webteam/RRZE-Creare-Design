@@ -1,4 +1,5 @@
 RRZE-Creare-Theme
-=================
+================
 
-Basis-Theme auf im Webbaukasten-Format
+Die Funktionalität basiert auf RRZE-Basis-Theme.
+Das Design und die Struktur auf Webbaukasten. (Design-Entwurf von T.K.)
