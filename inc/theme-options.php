@@ -82,7 +82,7 @@ function _rrze_columnlayout_options() {
         ),
         '1-3' => array(
                  'value' => '1-3',
-                 'label' => __( '2 Spalten - linke Sidebar', '_rrze' )
+                 'label' => __( '2 Spalten - linke Sidebar (Bis ca. 5 Widgets)', '_rrze' )
         ),
         '2-3' => array(
                  'value' => '2-3',
