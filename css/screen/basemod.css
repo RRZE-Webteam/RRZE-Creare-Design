@@ -132,6 +132,7 @@
         font-style: italic;
         font-weight: normal;
         color: #004874;
+        margin-left:0.7em;
     }
 
     /*  ------------------------------------------------------
@@ -414,15 +415,18 @@
         left: 0px;
     }
 
-   /* Suchmaske */
+    /* Suchmaske */
+
+    #bereichsmenu form#searchform {
+        position:absolute;
+        top:0.35em;
+        right:1.2em;
+    } 
+
     
-   #bereichsmenu form#searchform {
-       position:absolute;
-       top:0.35em;
-       right:1.2em;
-   } 
     
     
+
     /* Fuer eine erste Ebene */	
     ul#navigation {
         min-width: 960px;
@@ -773,9 +777,9 @@
     div#kurzinfo .widget-title a.rsswidget {
         font-size:1em;
     }
-    
+
     div#main div#menu div#kurzinfo h4:first-of-type {
-        margin-top:0.8em;
+        margin-top:4em;
     }
 
     div#main div#menu div#kurzinfo ul li a {		
@@ -959,24 +963,6 @@
 
 
     /*  ------------------------------------------------------
-    MAIN - MENU - CONTENT
-    
-        div#content { 
-    } 
-
-    div#content div#ls {
-        float: left;
-        width: 48%;
-    }
-
-    div#content div#rs {
-        float: right;
-        width: 48%;
-    }
-    --------------------------------------------------------*/
-
-
-    /*  ------------------------------------------------------
     MAIN - MENU - INHALTSINFO
     --------------------------------------------------------*/
     div#main div#inhaltsinfo {
@@ -989,6 +975,15 @@
         display: none;
     }
 
+    
+    /*  ------------------------------------------------------
+    CONTENT
+    --------------------------------------------------------*/
+     #content,
+    #content .entry-summary {
+        margin-left:0.7em;
+    }
+        
     /*  ------------------------------------------------------
     VORFOOTER
     --------------------------------------------------------*/
@@ -1647,15 +1642,24 @@
     }
 
     .widget-title a.rsswidget {
-    display:inline !important;
-    padding-left:0px !important;
-    padding-top:0px !important;
+        display:inline !important;
+        padding-left:0px !important;
+        padding-top:0px !important;
     }
 
-   #kurzinfo div.widget_nav_menu,
-   #kurzinfo div.widget_nav_menu{
+    #kurzinfo div.widget_nav_menu,
+    #kurzinfo div.widget_nav_menu{
         margin-top:4em !important;
     }
+
+    ul#recentcomments li a:before {
+        content: none !important;
+    }
+
+    ul#recentcomments li a.url:before {
+        content: " " !important;
+    }
+
     /*  ------------------------------------------------------
     FeedImport
     --------------------------------------------------------*/
@@ -1868,4 +1872,39 @@
         text-align: center;
         background-color: #F79C07;
     }
+    
+    
+    /*  ------------------------------------------------------
+    SUCHMASKE CONTENT
+    --------------------------------------------------------*/
+    
+   #content form#searchform div{
+        width:100% !important;
+    margin-bottom:2em;
+    }
+    #content form#searchform label{
+    font-size:0.9em;
+    margin-bottom:0.3em;
+    margin-top:0.3em;
+    font-weight:bold;
+    color:#888;
+    width:8em;
+    text-transform:uppercase;
+  }
+    #content form#searchform input#s{
+    margin-left:0.5em !important;
+  }
+   #content form#searchform input#searchsubmit:hover,
+   #content form#searchform input#searchsubmit:active,
+   #content form#searchform input#searchsubmit:focus{
+    background:#eeeeee;
+  }
+  #content div.widget h4{
+    font-size:1.2em;
+  }
+  #content div.widget_archive{
+    margin-bottom:1.5em;
+  }
 }
+
+

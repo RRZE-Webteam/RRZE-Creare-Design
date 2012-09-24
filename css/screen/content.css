@@ -232,6 +232,7 @@
 		font-style: italic;
 		color: #666;
 		border-bottom: #DDD 1px solid;
+                margin-left:0.7em;
 	} 
 	
 	div#content h2 a, 
@@ -960,6 +961,7 @@
           position:relative;
           bottom:1.2em;
           font-size:0.8em;
+          
         }    
 
         nav#nav-pages .nav-next,
@@ -967,6 +969,7 @@
         nav#nav-comments .nav-next {
          position:relative; 
          font-size:0.8em;
+         margin-left:0.7em;
         }  
         
         header .entry-meta{
